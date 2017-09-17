@@ -1,0 +1,19 @@
+Useful Commands for Docker
+
+Show all active containers
+docker ps
+
+Show all active and non-active containers
+docker ps -a
+
+Show all images available locally
+docker images
+
+Build image based on DockerFile in current directory
+docker build .
+
+Run an image and map container port to a port on the host machine
+docker run -p <host_port>:<container_port> -d <image_id>
+
+Additional flag for the run command to attempt to automatically restart a container 10 times on failure
+--restart=on-failure:10
