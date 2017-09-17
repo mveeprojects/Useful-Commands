@@ -1,3 +1,5 @@
+Useful Commands for SQL
+
 Login as root user
 mysql -u root -p
 
