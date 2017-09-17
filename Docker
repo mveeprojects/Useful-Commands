@@ -17,3 +17,15 @@ docker run -p <host_port>:<container_port> -d <image_id>
 
 Additional flag for the run command to attempt to automatically restart a container 10 times on failure
 --restart=on-failure:10
+
+Stop a container
+docker stop <container_name>
+
+Remove a stopped container
+docker rm <container_name>
+
+Delete all local images
+docker rmi $(docker images -q)
+
+Delete all local containers
+docker rm $(docker ps -a -q)
