@@ -1,0 +1,10 @@
+Useful Commands for Linux
+
+Find process running on a particular port
+netstat -vanp tcp | grep 8080
+
+Find process running on a particular port and show pid
+lsof -i tcp:<port>
+
+Kill a process by pid
+kill -9 <pid>
