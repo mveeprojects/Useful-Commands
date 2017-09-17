@@ -1,0 +1,29 @@
+Show all available DBs
+show dbs
+
+Select a DB to use
+use <db_name>
+
+Show all collections within the selected DB
+show collections
+
+Show all records in a given collection in a DB
+db.<collection_name>.find().pretty()
+
+Insert a document into a collection
+db.<collection_name>.insert( { item: "car", qty: 24 } )
+
+Delete a single document that matches a given filter from a collection
+db.<collection_name>.deleteOne( { "<key>" : <value>) } );
+
+Delete all documents that match a given filter from a collection
+db.<collection_name>.deleteMany( { "<key>" : <value> } );
+
+Delete all documents from a collection
+db.<collection_name>.remove({})
+
+Delete a collection
+db.<collection_name>.drop()
+
+Delete a DB (run 'use <db_name_to_drop>'' first)
+db.dropDatabase()
