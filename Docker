@@ -9,6 +9,10 @@ docker ps -a
 Show all images available locally
 docker images
 
+Run commands on a remote host with TLS certs
+docker --tlsverify -H <IP:Port/Hostname> <command>
+E.g. docker --tlsverify -H marksserver.com ps
+
 Build image based on DockerFile in current directory
 docker build .
 
