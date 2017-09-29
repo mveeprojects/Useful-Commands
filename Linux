@@ -8,3 +8,6 @@ lsof -i tcp:<port>
 
 Kill a process by pid
 kill -9 <pid>
+
+Find large directories and order
+du -hs */ .*/ | sort -n
