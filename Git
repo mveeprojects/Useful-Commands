@@ -1,11 +1,8 @@
 Rename branch locally (when on branch)
-
 git branch -m new-name
 
 Rename branch locally (when on different branch)
-
 git branch -m old-name new-name
 
 Push newly named branch
-
 git push origin -u new-name
