@@ -11,3 +11,7 @@ kill -9 <pid>
 
 Find large directories and order
 du -hs */ .*/ | sort -n
+
+[Python] Prettify JSON and output to new file
+
+python -m json.tool someUnformattedJson.json >> mark.json
