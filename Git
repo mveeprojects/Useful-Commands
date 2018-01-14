@@ -1,3 +1,12 @@
+View remote endpoint of repo (determine if ssh or https)
+git remote -v
+
+Set remote to https
+git remote set-url origin https://github.com:MarkVee87/springBoot_StartingPoint.git
+
+Set remote to ssh
+git remote set-url origin git@github.com:MarkVee87/springBoot_StartingPoint.git 
+
 Rename branch locally (when on branch)
 git branch -m new-name
 
