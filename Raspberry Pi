@@ -4,5 +4,9 @@ Install docker
 curl -sSL https://get.docker.com | sh
 
 Running spring boot app on RPi
-sudo apt-get install maven
+sudo apt-get install -y maven
 nohup mvn spring-boot:run &
+
+Install Mongo
+sudo apt-get install -y mongodb-server
+sudo service mongodb status
