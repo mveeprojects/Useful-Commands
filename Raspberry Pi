@@ -2,3 +2,7 @@ Raspbian OS:
 
 Install docker 
 curl -sSL https://get.docker.com | sh
+
+Running spring boot app on RPi
+sudo apt-get install maven
+nohup mvn spring-boot:run &
