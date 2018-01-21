@@ -20,3 +20,13 @@ sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources
 sudo apt-get update
 sudo apt-get install jenkins -y
 systemctl status jenkins.service
+
+Update Java
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+"Linux ARM 32 Hard Float ABI"
+Using wget doesn't work well, can't un-tar for some reason so download and extract in GUI
+Move uncompressed java folder to /usr/local
+Create sympoloc links for java (and compiler) to /usr/bin directory
+sudo update-alternatives --install /usr/bin/java java /usr/local/jdk1.8.0_161/bin/java 1000
+sudo update-alternatives --install /usr/bin/javac javac /usr/local/jdk1.8.0_161/bin/javac 1000
+java -version
