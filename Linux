@@ -3,8 +3,10 @@ Useful Commands for Linux
 Generate ssh keys
 ssh-keygen -t rsa
 
-Find process running on a particular port
+Find processes running on a particular ports
 netstat -vanp tcp | grep 8080
+sudo netstat -tlnp | grep 8080
+sudo netstat -lptu (see all listening ports)
 
 Find process running on a particular port and show pid
 lsof -i tcp:<port>
