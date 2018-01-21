@@ -22,3 +22,7 @@ du -hsc * | sort -h
 
 [Python] Prettify JSON and output to new file
 python -m json.tool someUnformattedJson.json >> mark.json
+
+Add alias for command (redHat .bashrc else .bash_profile)
+sudo nano/vi/vim .bashrc/.bash_profile
+alias x='somecommand'
