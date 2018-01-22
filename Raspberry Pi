@@ -50,3 +50,12 @@ edit app/config.json with jenkins service
   }
 }
 http://www.instructables.com/id/Install-Nodejs-and-Npm-on-Raspberry-Pi/
+uname -m
+wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-armv7l.tar.xz
+tar -xzf <filename>
+cd <filename>
+sudo cp -R * /usr/local/
+node -v
+npm -v
+npm install
+node app.js
