@@ -32,3 +32,21 @@ Create sympoloc links for java (and compiler) to /usr/bin directory
 sudo update-alternatives --install /usr/bin/java java /usr/local/jdk1.8.0_161/bin/java 1000
 sudo update-alternatives --install /usr/bin/javac javac /usr/local/jdk1.8.0_161/bin/javac 1000
 java -version
+
+Installing standalon node build monitor
+git clone https://github.com/marcells/node-build-monitor.git
+edit app/config.json with jenkins service
+{
+  "name": "Jenkins",
+  "configuration": {
+    "url": "http://localhost:8080",
+    "username": "mark",
+    "password": "pass",
+    "job": "spring-boot-simple",
+    "numberOfBuildsPerJob": 3,
+    "options": {
+      "strictSSL": false
+    }
+  }
+}
+http://www.instructables.com/id/Install-Nodejs-and-Npm-on-Raspberry-Pi/
