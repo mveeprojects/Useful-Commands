@@ -59,3 +59,14 @@ node -v
 npm -v
 npm install
 node app.js
+
+Webcam usage
+sudo apt-get install fswebcam
+fswebcam image.jpg
+fswebcam -r 1280x720 image2.jpg
+
+sudo apt-get install motion
+/etc/motion/montion.conf
+/var/lib/motion
+sudo service motion status|stop
+sudo motion
