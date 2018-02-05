@@ -73,5 +73,8 @@ sudo motion
 
 Make motion run and stop at certain times of day
 crontab -e
-01 09 * * * sudo motion
-01 17 * * * sudo killall -9 motion
+00 09 * * 1-5 sudo motion
+00 17 * * 1-5 sudo killall -9 motion
+
+Move all files from a directory into a newly created directory ($_ saves ref to new dir/last command result)
+01 17 * * 1-5 sudo mkdir -p ../$(date +%Y%m%d_%H%M%S); mv * $_
