@@ -70,3 +70,8 @@ sudo apt-get install motion
 /var/lib/motion
 sudo service motion status|stop
 sudo motion
+
+Make motion run and stop at certain times of day
+crontab -e
+01 09 * * * sudo motion
+01 17 * * * sudo killall -9 motion
