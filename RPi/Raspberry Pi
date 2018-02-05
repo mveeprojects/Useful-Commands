@@ -77,4 +77,4 @@ crontab -e
 00 17 * * 1-5 sudo killall -9 motion
 
 Move all files from a directory into a newly created directory ($_ saves ref to new dir/last command result)
-01 17 * * 1-5 sudo mkdir -p ../$(date +%Y%m%d_%H%M%S); mv * $_
+01 17 * * 1-5 sudo mkdir -p ../motionoutputs/$(date +%Y%m%d_%H%M%S); mv * $_
