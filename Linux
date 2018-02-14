@@ -26,3 +26,6 @@ python -m json.tool someUnformattedJson.json >> mark.json
 Add alias for command (redHat .bashrc else .bash_profile)
 sudo nano/vi/vim .bashrc/.bash_profile
 alias x='somecommand'
+
+Copy from remote to local
+scp username@192.168.1.111:/path/to/myfile.txt /Users/Jamie/local/path/to/myfile.txt
