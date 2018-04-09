@@ -29,3 +29,6 @@ alias x='somecommand'
 
 Copy from remote to local
 scp username@192.168.1.111:/path/to/myfile.txt /Users/Jamie/local/path/to/myfile.txt
+
+Find file in root dir
+find / -name somefilename
