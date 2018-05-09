@@ -1,2 +1,5 @@
 Enable/Disable auto import (maven)
 cmd + , -> "Build, Execution, Deployment" -> "Build Tools" -> "Maven" -> "importing" -> "Import Maven projects automatically"
+
+Convert Java class to Scala object
+Ctrl + shift + g
