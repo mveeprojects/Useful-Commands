@@ -3,3 +3,6 @@ cmd + , -> "Build, Execution, Deployment" -> "Build Tools" -> "Maven" -> "import
 
 Convert Java class to Scala object
 Ctrl + shift + g
+
+Install on Linux (tar.gz)
+https://thishosting.rocks/install-java-ubuntu/
