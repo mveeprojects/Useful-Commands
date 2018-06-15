@@ -1,4 +1,4 @@
-Useful Commands for Linux:
+Useful Commands for Linux
 
 Generate ssh keys
 ssh-keygen -t rsa
