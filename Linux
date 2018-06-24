@@ -38,3 +38,6 @@ free -m
 
 View detailed memory usage as well as CPU stats etc
 top
+
+Find and delete empty files from current dir down
+find . -type f -empty -delete -print
