@@ -21,6 +21,7 @@ sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources
 sudo apt-get update
 sudo apt-get install jenkins -y
 systemctl status jenkins.service
+/var/lib/jenkins/hudson.model.UpdateCenter.xml change url to use http instead of https
 http://afonsof.com/jenkins-material-theme/
 
 Update Java
