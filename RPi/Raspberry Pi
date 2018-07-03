@@ -78,3 +78,13 @@ crontab -e
 
 Move all files from a directory into a newly created directory ($_ saves ref to new dir/last command result)
 31 17 * * 1-5 sudo mkdir -p /var/lib/motionoutputs/$(date +%Y%m%d_%H%M%S); sudo mv /var/lib/motion/* $_
+
+Install Java8_171 on RPI
+wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjdk8-downloads-2133151.html; oraclelicense=accept-securebackup-cookie;" "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-arm32-vfp-hflt.tar.gz"
+tar -xvzf jdk-8u171-linux-arm32-vfp-hflt.tar.gz
+mv jdk1.8.0_171/ /usr/local/
+sudo nano ~/.bashrc
+  - export JAVA_HOME="/usr/local/jdk1.8.0_171/"
+  - export PATH=$JAVA_HOME:$PATH
+source ~/.bashrc
+java -version
