@@ -47,3 +47,6 @@ wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2F
 
 Unpack tar.gz
 tar -xzf mything.tar.gz
+
+Make 100 copies of a file with number added to the name
+for f in {1..100}; do cp some-file.json some-file-$f.json; done
