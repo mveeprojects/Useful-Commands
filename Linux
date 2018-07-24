@@ -53,3 +53,6 @@ for f in {1..100}; do cp some-file.json some-file-$f.json; done
 
 Zipping when argument list is too long (omit -xvf etc)
 zip -r my.zip .
+
+Delete all json files in dir when argument list is too long for rm -rf *.json
+for f in *.json; do sudo rm -rf "$f"; done
