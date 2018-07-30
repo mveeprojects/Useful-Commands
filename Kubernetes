@@ -1,0 +1,2 @@
+Show all nodes
+kubectl get nodes
