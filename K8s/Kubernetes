@@ -1,2 +1,11 @@
 Show all nodes
 kubectl get nodes
+
+Run a pod based on a yml file (see pod.yml)
+kubectl create -f pod.yml
+
+Show all pods
+kubectl get pods
+
+Detailing information on a pod (inc. container creation  status)
+kubectl describe pods
