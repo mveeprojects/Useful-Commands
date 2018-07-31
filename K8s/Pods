@@ -4,8 +4,14 @@ kubectl get nodes
 Run a pod based on a yml file (see pod.yml)
 kubectl create -f pod.yml
 
-Show all pods
+Show all pods (default namespace)
 kubectl get pods
+
+Show a particular pod
+kubectl get pods/<pod_name>
+
+Show all pods in all namespaces
+kubectl get pods --all-namespaces
 
 Detailing information on a pod (inc. container creation  status)
 kubectl describe pods
