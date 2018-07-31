@@ -1,0 +1,105 @@
+Kubernetes Basics:
+ - https://kubernetes.io/docs/tutorials/kubernetes-basics/
+
+Minikube used to run a Kubernetes cluster locally
+ - this requires a hypervisor - VirtualBox 5.2.8 in this case (https://www.virtualbox.org/wiki/Downloads)
+ - as well as kubectl (Kubernetes Command-line Tool) to deploy and manage apps on K8s (https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+ - Minikube 0.25.2 (https://github.com/kubernetes/minikube/releases) curl or brew cask install minikube
+
+Master:
+ - Co-ordinates the cluster
+ - Similar to a 'master' in puppet
+ - Manages scaling the cluster, rolling out updates etc.
+
+Nodes:
+ - Workers that run apps
+ - Each node has a 'Kubelet' (similar to an 'agent' in puppet)
+ - Prod clusters are recommended to have a minumum of 3 nodes
+
+Creating a local cluster
+ - Minikube creates a single-node cluster in a VM on your machine through your chosen hypervisor (VirtualBox)
+ - minikube version
+ - minikube start
+ - kubectl version
+ - kubectl cluster-info
+ - kubectl get nodes
+
+Deployment config
+ - how to create and update instances of apps on nodes in cluster
+ - Kubernetes Deployment Controller continuously monitors deployed apps and immediately replaces any nodes that go down
+
+Running an example app on our node
+ - kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080
+ - kubectl get deployments
+ - deploys an app to an available Node (as a container, inside a Pod)
+ - created a 'pod' ("logical host" grouping of containers)
+ - you can create a pod of one or more containers
+ - containers in a pod share an ip address and port space
+ - a Node can contain multiple Pods
+
+kubectl proxy
+ - kubectl proxy (enables input from outside the K8s nodes' private network)
+ - export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+ - curl http://localhost:8001/api/v1/proxy/namespaces/default/pods/$POD_NAME/
+ - kubectl logs $POD_NAME
+ - kubectl get pods (show all pods)
+ - kubectl describe pods (show all containers inc info inside all pods)
+
+Executing commands directly on containers from outside
+ - kubectl exec $POD_NAME env | ls | echo hello from the other side
+
+Initiating a bash session inside a container
+ - kubectl exec -ti $POD_NAME bash
+ - curl localhost:8080 to see the app running
+
+Services
+ - expose your app to the outside world
+ - defines a logical set of Pods and a policy by which to access them
+ - defined using YAML or JSON
+ - kubectl get pods
+ - kubectl get services
+ - kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
+ - kubectl get services
+ - kubectl describe services/kubernetes-bootcamp
+ - export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+ - curl $(minikube ip):$NODE_PORT
+ - kubectl get pods -l run=kubernetes-bootcamp (find specific pod)
+ - kubectl get services -l run=kubernetes-bootcamp (find specific service)
+ - kubectl label pod $POD_NAME app=v1 (label a pod)
+ - kubectl describe pods $POD_NAME (view labels etc)
+ - kubectl get pods -l app=v1 (query list of pods by label)
+ - kubectl delete service -l run=kubernetes-bootcamp (delete service)
+ - curl $(minikube ip):$NODE_PORT (confirm app is no longer reachable from outside the cluster after service deleted)
+ - kubectl exec -ti $POD_NAME curl localhost:8080 (however the app is still running happily in its private cluster)
+
+Services and Scaling
+ - Services have an integrated load balancer to distribute traffic to all pods of an exposed deployment
+ - Services continuously monitor for running pods to distribute traffic only to available pods
+ - kubectl get deployments (currently deployment only has 1 pod)
+ - kubectl scale deployments/kubernetes-bootcamp --replicas=4 (scale the deployment out to 4 pods)
+ - kubectl get pods -o wide (there are now 4 running pods, -o wide provides pod IP and NODE values)
+ - kubectl describe deployments/kubernetes-bootcamp (logs of deployment now shows an event of the scaling)
+ - kubectl scale deployments/kubernetes-bootcamp --replicas=2 (scale down to 2 nodes)
+ - kubectl get deployments (2 nodes can be seen now)
+ - kubectl get pods -o wide (2 pods terminated, only 2 running)
+
+Services and Automatic Load Balancing
+ - kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080 (expose service again)
+ - kubectl get services (check service is up)
+ - kubectl describe services/kubernetes-bootcamp (see Endpoints field)
+ - export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+ - curl $(minikube ip):$NODE_PORT (repeatedly enter this command to see the service sending traffic across all pods)
+
+Rolling updates and rollback
+ - updates take place with zero downtime by incrementally updating Pods instances with new ones
+ - the maximum number of Pods that can be unavailable during the update and the maximum number of new Pods that can be created, is one
+ - kubectl get deployments
+ - kubectl scale deployments/kubernetes-bootcamp --replicas=4
+ - kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v2
+ - kubectl get pods (run this very quickly a couple of times to see the pods updating, the deployment upgrade creates replacement pods and terminates the old ones)
+ - export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+ - curl $(minikube ip):$NODE_PORT (run this a bunch of times, you'll see it will still load balance and the version has been incremented)
+ - kubectl rollout status deployments/kubernetes-bootcamp
+ - kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=gcr.io/google-samples/kubernetes-bootcamp:v10
+
+minikube stop
