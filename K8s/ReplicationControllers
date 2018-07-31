@@ -9,3 +9,6 @@ kubectl describe rc
 
 Apply changes after updating rc yml file
 kubectl apply -f rc.ym
+
+Show replication controllers (inc. containers, images and selector fields)
+kubectl get rc -o wide
