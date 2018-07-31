@@ -15,3 +15,6 @@ kubectl get pods --all-namespaces
 
 Detailing information on a pod (inc. container creation  status)
 kubectl describe pods
+
+Delete pods
+kubectl delete pods <pod_name>
