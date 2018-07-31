@@ -1,0 +1,2 @@
+Show all services
+kubectl get services
