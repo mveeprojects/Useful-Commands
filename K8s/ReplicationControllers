@@ -1,0 +1,2 @@
+Create a replica set of pods from yml file
+kubectl create -f rc.yml
