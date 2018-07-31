@@ -15,4 +15,4 @@ spec:
       - name: hello-pod
         image: nigelpoulton/pluralsight-docker-ci:latest
         ports:
-          containerPort: 8080
+        - containerPort: 8080
