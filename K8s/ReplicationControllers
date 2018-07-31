@@ -1,2 +1,11 @@
-Create a replica set of pods from yml file
+Create a replica set of pods from yml file (see rc.yml)
 kubectl create -f rc.yml
+
+Show replication controllers
+kubectl get rc
+
+Describe replication controllers
+kubectl describe rc
+
+Apply changes after updating rc yml file
+kubectl apply -f rc.ym
