@@ -33,3 +33,9 @@ docker rmi $(docker images -q)
 
 Delete all local containers
 docker rm $(docker ps -a -q)
+
+Save docker image to zip file
+docker save -o <path for generated tar file> <image name>
+
+Open zip file containing docker image
+docker load -i <path to image tar file>
