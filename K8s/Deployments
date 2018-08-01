@@ -1,0 +1,14 @@
+Create a deployment from yml file (see deployment.yaml) - can re-run this after updating deployment yaml to perform rolling deployment
+kubectl apply -f deployment.yaml
+
+Show details of a given deployment
+kubectl describe deployment <deployment_name>
+
+Delete a deployment (terminates all pods associated with deployment)
+kubectl delete deployment nginx-deployment
+
+Show all deployments
+kubectl get deployments
+
+Show a given deployment
+kubectl get deployment <deployment_name>
