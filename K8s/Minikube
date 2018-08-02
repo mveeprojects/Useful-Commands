@@ -1,0 +1,8 @@
+Show IP of minikube VM
+minikube ip
+
+SSH into minikube
+minikube ssh
+
+SCP files from local machine into minikube VM
+scp -i /<dir_path>/.minikube/machines/minikube/id_rsa <file_to_copy> docker@<minikube_vm_ip>:/<dir_path>/<file_name_in_minikube>
