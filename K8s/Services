@@ -1,2 +1,4 @@
 Show all services
 kubectl get services
+
+kubectl expose deployment/munchy --type=NodePort --port 4025
