@@ -33,6 +33,9 @@ scp username@192.168.1.111:/path/to/myfile.txt /Users/Jamie/local/path/to/myfile
 Find file in root dir
 find / -name somefilename
 
+Find directory in root dir
+find / -type d -name 'some_filename'
+
 View memory usage (simple view)
 free -m
 
