@@ -31,4 +31,4 @@ Delete a DB (run 'use <db_name_to_drop>'' first)
 db.dropDatabase()
 
 Find all records according to a nested field
-db.collection.find( { "firstLevelFieldName.secondLevelFieldName": "field_value_to_find" } ).pretty()
+db.<collection_name>.find( { "firstLevelFieldName.secondLevelFieldName": "field_value_to_find" } ).pretty()
