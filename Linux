@@ -59,3 +59,9 @@ zip -r my.zip .
 
 Delete all json files in dir when argument list is too long for rm -rf *.json
 for f in *.json; do sudo rm -rf "$f"; done
+
+Install ifconfig if missing
+sudo [yum|apt-get] install -y net-tools
+
+Install telnet if missing
+sudo [yum|apt-get] install -y telnet telnet-server
