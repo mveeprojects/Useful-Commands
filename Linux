@@ -64,4 +64,4 @@ Install ifconfig if missing
 sudo [yum|apt-get] install -y net-tools
 
 Install telnet if missing
-sudo [yum|apt-get] install -y telnet telnet-server
+sudo [yum|apt-get] install -y telnet
