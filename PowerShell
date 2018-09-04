@@ -1,0 +1,5 @@
+Find process running on a port and show pid
+netstat -ano | grep 8080
+
+Kill process by pid
+taskkill /PID <pid> /F
