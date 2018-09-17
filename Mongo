@@ -30,5 +30,13 @@ db.<collection_name>.drop()
 Delete a DB (run 'use <db_name_to_drop>'' first)
 db.dropDatabase()
 
-Find all records according to a nested field
+Find all documents according to a nested field
 db.<collection_name>.find( { "<top_level_field_name>.<second_level_field_name>": "<field_value_to_find>" } ).pretty()
+
+Find all documents that match 2 fields
+db.<collection_name>.find(
+    {$and:[
+        {"<top_level_field_name>.<second_level_field_name>":{"$in":["<field_value_to_find>"]}},
+        {"<top_level_field_name>.<second_level_field_name>":{"$in":["<field_value_to_find>"]}}
+    ]}
+).pretty()
