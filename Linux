@@ -14,6 +14,12 @@ lsof -i tcp:<port>
 Kill a process by pid
 kill -9 <pid>
 
+Show the amount of disk space used and available
+df
+
+Display the amount of disk space used by the specified files and for each subdirectory
+du
+
 Find large directories and order
 du -hs */ .*/ | sort -n
 
@@ -65,9 +71,3 @@ sudo [yum|apt-get] install -y net-tools
 
 Install telnet if missing
 sudo [yum|apt-get] install -y telnet
-
-Show the amount of disk space used and available
-df
-
-Display the amount of disk space used by the specified files and for each subdirectory
-du
