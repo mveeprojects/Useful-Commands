@@ -71,3 +71,6 @@ sudo [yum|apt-get] install -y net-tools
 
 Install telnet if missing
 sudo [yum|apt-get] install -y telnet
+
+Switch to root user and stay in same directory
+sudo -s
