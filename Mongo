@@ -40,3 +40,6 @@ db.<collection_name>.find(
         {"<top_level_field_name>.<second_level_field_name>":{"$in":["<field_value_to_find>"]}}
     ]}
 ).pretty()
+
+Show status of cluster, including which node is primary (see "syncingTo" field)
+rs.status()
