@@ -74,3 +74,9 @@ sudo [yum|apt-get] install -y telnet
 
 Switch to root user and stay in same directory
 sudo -s
+
+Run this before running a bash script to show all executed steps (good for debugging bash scripts)
+set -x
+
+Run this to stop seeing all debug steps of a bash scripts
+set +x
