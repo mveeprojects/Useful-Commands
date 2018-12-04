@@ -42,6 +42,9 @@ find / -name somefilename
 Find directory in root dir
 find / -type d -name 'some_filename'
 
+Find files containing a given string
+grep -rn '/path/to/somewhere/' -e "pattern"
+
 View memory usage (simple view)
 free -m
 
