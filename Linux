@@ -84,5 +84,8 @@ set -x
 Run this to stop seeing all debug steps of a bash scripts
 set +x
 
-Open a port and display a message in the body (access via "curl localhost:4001")
+Open a port that displays a simple message (access via curl only e.g. "curl -v localhost:4001")
 echo "Hello, World"  | nc -l 4001
+
+Start a simple http server (can be accessed via browser or curl e.g. "localhost:4001/index.html" or "curl -v localhost:4001/index.html")
+python -m SimpleHTTPServer 4001
