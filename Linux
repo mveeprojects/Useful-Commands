@@ -83,3 +83,6 @@ set -x
 
 Run this to stop seeing all debug steps of a bash scripts
 set +x
+
+Open a port and display a message
+echo "Hello, World!"  | nc -l 4001
