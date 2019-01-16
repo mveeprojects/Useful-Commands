@@ -21,3 +21,8 @@ git push origin :old-name new-name
 
 Update all repos inside current dir
 find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
+
+In the case that, as a result of changing the branch name, can no longer push/pull from origin do this:
+git branch --unset-upstream
+git push --set-upstream origin <new branch name>
+git pull
