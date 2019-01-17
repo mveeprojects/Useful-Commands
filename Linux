@@ -89,3 +89,6 @@ echo "Hello, World"  | nc -l 4001
 
 Start a simple http server (can be accessed via browser or curl e.g. "localhost:4001/index.html" or "curl -v localhost:4001/index.html")
 python -m SimpleHTTPServer 4001
+
+View all users 
+cat /etc/passwd
