@@ -43,3 +43,6 @@ db.<collection_name>.find(
 
 Show status of cluster, including which node is primary (see "syncingTo" field)
 rs.status()
+
+Find documents with a specific field being a non-empty string
+db.collection.find({"lastname" : {"$exists" : true, "$ne" : ""}})
