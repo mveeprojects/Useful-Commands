@@ -45,6 +45,9 @@ find / -type d -name 'some_filename'
 Find files containing a given string
 grep -rn '/path/to/somewhere/' -e "pattern"
 
+Get a count of files in a given directory
+find ./directory-name -type f | wc -l
+
 View memory usage (simple view)
 free -m
 
