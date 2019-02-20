@@ -95,3 +95,6 @@ python -m SimpleHTTPServer 4001
 
 View all users 
 cat /etc/passwd
+
+View last 1000 lines of a file
+tail -n 1000 <filename>
