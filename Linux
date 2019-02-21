@@ -54,8 +54,14 @@ free -m
 View detailed memory usage as well as CPU stats etc
 top
 
+Delete all files in dir (workaround for rm -rf * "argument list is too long")
+find . -type f -delete
+
 Find and delete empty files from current dir down
 find . -type f -empty -delete -print
+
+Delete all json files in dir when argument list is too long for rm -rf *.json
+for f in *.json; do sudo rm -rf "$f"; done
 
 Get tar.gz of Java8_171 from command line (wget)
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjdk8-downloads-2133151.html; oraclelicense=accept-securebackup-cookie;" "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz"
@@ -68,9 +74,6 @@ for f in {1..100}; do cp some-file.json some-file-$f.json; done
 
 Zipping when argument list is too long (omit -xvf etc)
 zip -r my.zip .
-
-Delete all json files in dir when argument list is too long for rm -rf *.json
-for f in *.json; do sudo rm -rf "$f"; done
 
 Install ifconfig if missing
 sudo [yum|apt-get] install -y net-tools
