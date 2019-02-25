@@ -39,3 +39,6 @@ docker save -o <path for generated tar file> <image name>
 
 Open zip file containing docker image
 docker load -i <path to image tar file>
+
+Copy a file into a docker container
+docker cp hello.txt myContainerName:/dir/path/goes/here
