@@ -42,3 +42,6 @@ docker load -i <path to image tar file>
 
 Copy a file into a docker container
 docker cp hello.txt myContainerName:/dir/path/goes/here
+
+Run a bash command inside a running container and detach
+docker exec myContainerName bash -c 'echo hello'
