@@ -45,3 +45,8 @@ docker cp hello.txt myContainerName:/dir/path/goes/here
 
 Run a bash command inside a running container and detach
 docker exec myContainerName bash -c 'echo hello'
+
+Install and run runlike
+sudo yum install python-pip
+pip install runlike
+runlike <container-name>
