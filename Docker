@@ -50,3 +50,7 @@ Install and run runlike
 sudo yum install -y python-pip
 pip install runlike
 runlike <container-name>
+
+"Error response from daemon: client is newer than server"
+export DOCKER_API_VERSION=1.23
+
