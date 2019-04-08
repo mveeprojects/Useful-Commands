@@ -46,3 +46,6 @@ rs.status()
 
 Find documents with a specific field being a non-empty string
 db.collection.find({"lastname" : {"$exists" : true, "$ne" : ""}})
+
+Find the N most recently added documents
+db.collection.find().limit(N).sort({$natural:-1}).pretty()
