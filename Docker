@@ -28,6 +28,9 @@ docker stop <container_name>
 Remove a stopped container
 docker rm <container_name>
 
+Stop and remove all containers
+docker rm -f $(docker ps -a -q)
+
 Delete all local images
 docker rmi $(docker images -q)
 
