@@ -1,3 +1,6 @@
+Commit changes locally
+git commit -a -m "Commit message goes here"
+
 View remote endpoint of repo (determine if ssh or https)
 git remote -v
 
