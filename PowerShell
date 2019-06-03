@@ -10,4 +10,4 @@ Install Linux for Windows
 
 Modify hosts file (requires Linux for Windows)
 C:\Windows\System32\drivers\etc\hosts
-bash -c "vi hosts"
+bash -c "nano hosts"
