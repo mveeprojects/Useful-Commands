@@ -1,4 +1,5 @@
-Raspbian OS:
+Shutdown RPI immediately
+sudo shutdown -h now
 
 Install docker 
 curl -sSL https://get.docker.com | sh
