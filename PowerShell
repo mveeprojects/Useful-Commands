@@ -3,3 +3,10 @@ netstat -ano | grep 8080
 
 Kill process by pid
 taskkill /PID <pid> /F
+
+Install Linux for Windows
+(run as admin) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+Modify hosts file (requires Linux for Windows)
+C:\Windows\System32\drivers\etc\hosts
+bash -c "vi hosts"
