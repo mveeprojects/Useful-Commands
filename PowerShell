@@ -6,6 +6,7 @@ taskkill /PID <pid> /F
 
 Install Linux for Windows
 (run as admin) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+(install a flavour of linux) https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
 Modify hosts file (requires Linux for Windows)
 C:\Windows\System32\drivers\etc\hosts
