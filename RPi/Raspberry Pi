@@ -28,7 +28,7 @@ http://afonsof.com/jenkins-material-theme/
 
 Grant Jenkins permissions to use Docker (sudo)
 Make sudo -> usermod -aG sudo username
-Remove need to enter password when using Docker as sudo sudo visudo -> jenkins ALL=(ALL) NOPASSWD: ALL
+Remove need to enter password when using Docker as sudo -> sudo visudo -> jenkins ALL=(ALL) NOPASSWD: ALL
 
 Update Java
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
