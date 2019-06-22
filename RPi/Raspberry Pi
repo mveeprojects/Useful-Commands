@@ -26,6 +26,10 @@ If Jenkins says the instance appears to be offline, open /var/lib/jenkins/hudson
   - systemctl restart jenkins.service
 http://afonsof.com/jenkins-material-theme/
 
+Grant Jenkins permissions to use Docker (sudo)
+Make sudo -> usermod -aG sudo username
+Remove need to enter password when using Docker as sudo -> jenkins ALL=(ALL) NOPASSWD: ALL
+
 Update Java
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 "Linux ARM 32 Hard Float ABI"
@@ -36,7 +40,7 @@ sudo update-alternatives --install /usr/bin/java java /usr/local/jdk1.8.0_161/bi
 sudo update-alternatives --install /usr/bin/javac javac /usr/local/jdk1.8.0_161/bin/javac 1000
 java -version
 
-Installing standalon node build monitor
+Installing standalone node build monitor
 git clone https://github.com/marcells/node-build-monitor.git
 edit app/config.json with jenkins service
 {
