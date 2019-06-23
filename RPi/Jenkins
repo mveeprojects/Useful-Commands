@@ -1,0 +1,16 @@
+Check local docker processes and action accordingly:
+
+dockerProcesses=`sudo docker ps -a`
+containerID=$(echo "$dockerProcesses" | grep "webexamplenode" | awk '{print $1}')
+if [ ! -z ${containerID} ] ; then
+    echo "App is currently running, stopping and removing old container"
+    sudo docker rm -f ${containerID}
+    echo "Removing old docker images"
+    sudo docker rmi webexample
+fi
+
+echo "Building new docker image"
+sudo docker build -t webexample .
+
+echo "Running new docker container" 
+sudo docker run -d -p8081:8081 --name webexamplenode webexample
