@@ -49,3 +49,6 @@ db.collection.find({"lastname" : {"$exists" : true, "$ne" : ""}})
 
 Find the N most recently added documents
 db.collection.find().limit(N).sort({$natural:-1}).pretty()
+
+Export collection to csv
+docker exec -i 418f46e5595d  mongoexport --db saveInfo --collection infoobjects --type=csv --fields _id,postLink,postTitle,contactPhone --out ./info.csv
