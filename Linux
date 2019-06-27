@@ -48,6 +48,9 @@ grep -rn '/path/to/somewhere/' -e "pattern"
 Get a count of files in a given directory
 find ./directory-name -type f | wc -l
 
+Get count of lines in a given file
+wc -l filename
+
 View memory usage (simple view)
 free -m
 
