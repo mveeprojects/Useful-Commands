@@ -14,3 +14,17 @@ sudo docker build -t webexample .
 
 echo "Running new docker container" 
 sudo docker run -d -p8081:8081 --name webexamplenode webexample
+
+sudo usermod -aG sudo jenkins
+
+sudo visudo
+```
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+jenkins ALL=(ALL) NOPASSWD: ALL
+
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+%jenkins ALL=(ALL:ALL) NOPASSWD:ALL
+```
+visudo ref: https://askubuntu.com/questions/100051/why-is-sudoers-nopasswd-option-not-working
