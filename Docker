@@ -62,3 +62,6 @@ for f in /data/db/*; do docker cp $f mongo:/data/db/; done
 
 Prune unused volumes
 docker system prune --volumes (replace with --all for images etc as well)
+
+Show last 100 lines of logs
+docker logs --tail 10 <container>
