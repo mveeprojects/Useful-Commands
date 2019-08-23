@@ -64,4 +64,4 @@ Prune unused volumes
 docker system prune --volumes (replace with --all for images etc as well)
 
 Show last 100 lines of logs
-docker logs --tail 10 <container>
+docker logs --tail 100 <container>
