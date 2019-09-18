@@ -29,3 +29,8 @@ In the case that, as a result of changing the branch name, can no longer push/pu
 git branch --unset-upstream
 git push --set-upstream origin <new branch name>
 git pull
+
+Duplicate repo without forking
+git clone --bare https://github.com/exampleuser/old-repository.git
+cd old-repository.git
+git push --mirror https://github.com/exampleuser/new-repository.git
