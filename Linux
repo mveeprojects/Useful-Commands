@@ -105,3 +105,6 @@ tar -xvf filename.tar
 
 Unpacking tar.gz (1 step)
 tar -xzf filename.tar.gz
+
+Revert to default shell
+chsh -s bash
