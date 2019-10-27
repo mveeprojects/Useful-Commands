@@ -34,3 +34,6 @@ Duplicate repo without forking
 git clone --bare https://github.com/exampleuser/old-repository.git
 cd old-repository.git
 git push --mirror https://github.com/exampleuser/new-repository.git
+
+Squash and merge branch in current branch
+git merge --squash <brnach-to-squash-and-merge>
