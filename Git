@@ -37,3 +37,10 @@ git push --mirror https://github.com/exampleuser/new-repository.git
 
 Squash and merge branch in current branch
 git merge --squash <branch-to-squash-and-merge>
+
+Stash all including untracked
+git stash --all
+
+Reset to head
+git reset --hard HEAD
+
