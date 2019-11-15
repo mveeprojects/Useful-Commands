@@ -65,3 +65,6 @@ docker system prune --volumes (replace with --all for images etc as well)
 
 Show last 100 lines of logs
 docker logs --tail 100 <container>
+
+Set DOCKER_CERT_PATH
+export DOCKER_CERT_PATH=~/.docker
