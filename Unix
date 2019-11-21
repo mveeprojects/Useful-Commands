@@ -108,3 +108,10 @@ tar -xzf filename.tar.gz
 
 Revert to default shell
 chsh -s bash
+
+Check OS (use either of the below)
+cat /etc/os-release
+lsb_release -a
+hostnamectl
+
+
