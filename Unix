@@ -114,4 +114,5 @@ cat /etc/os-release
 lsb_release -a
 hostnamectl
 
-
+Install telnet (CentOS)
+yum install telnet telnet-server -y
