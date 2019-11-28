@@ -76,7 +76,7 @@ Install ifconfig if missing
 sudo [yum|apt-get] install -y net-tools
 
 Install telnet if missing
-sudo [yum|apt-get] install -y telnet
+sudo [yum|apt-get] install -y telnet|telnet-server
 
 Switch to root user and stay in same directory
 sudo -s
@@ -113,6 +113,3 @@ Check OS (use either of the below)
 cat /etc/os-release
 lsb_release -a
 hostnamectl
-
-Install telnet (CentOS)
-yum install telnet telnet-server -y
