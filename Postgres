@@ -10,6 +10,9 @@ docker exec -it postgres psql -U mark
 Show all tables
 \dt
 
+Describe a table (use \d+ to get additional info)
+\d table_name
+
 Create very basic table with auto-incrementing (SERIAL) primary key
 CREATE TABLE mytable (
   id SERIAL PRIMARY KEY
