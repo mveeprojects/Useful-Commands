@@ -12,4 +12,4 @@ Show all tables
 Create very basic table with auto-incrementing (SERIAL) primary key
 CREATE TABLE products (
   id SERIAL PRIMARY KEY
-};
+);
