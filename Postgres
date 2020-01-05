@@ -10,6 +10,6 @@ Show all tables
 \dt
 
 Create very basic table with auto-incrementing (SERIAL) primary key
-CREATE TABLE products (
+CREATE TABLE mytable (
   id SERIAL PRIMARY KEY
 );
