@@ -1,5 +1,15 @@
+More useful commands: http://jazstudios.blogspot.com/2010/06/postgresql-login-commands.html
+
 Create and run local Postres docker container
 docker run -d --name=postgres -e POSTGRES_USER=mark -e POSTGRES_PASSWORD=password postgres
 
 Login to above docker container
 docker exec -it postgres psql -U mark
+
+Show all tables
+\dt
+
+Create very basic table with auto-incrementing (SERIAL) primary key
+CREATE TABLE products (
+  id SERIAL PRIMARY KEY
+};
