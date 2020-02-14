@@ -60,8 +60,11 @@ export DOCKER_API_VERSION=1.23
 Docker cp multiple files at once (whole db dir)
 for f in /data/db/*; do docker cp $f mongo:/data/db/; done
 
+Prune stopped containers. unused networks, dangling images, dangling build cache
+docker system prune
+
 Prune unused volumes
-docker system prune --volumes (replace with --all for images etc as well)
+docker volume prune
 
 Show last 100 lines of logs
 docker logs --tail 100 <container>
