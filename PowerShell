@@ -11,3 +11,13 @@ Install Linux for Windows
 Modify hosts file (requires Linux for Windows)
 C:\Windows\System32\drivers\etc\hosts
 bash -c "nano hosts"
+
+Setting file/dir permissions (chmod equiv, taken from https://superuser.com/questions/1002883/how-do-i-specify-chmod-744-in-powershell)
+Set Owner of a specific file
+ICACLS "D:\test\test.txt" /setowner "administrator"
+Grant Full Control
+ICACLS "D:\test\test.txt" /grant:r "administrator:(F)" /C
+Grant Read and Execute Access of a specific file
+ICACLS "D:\test\test.txt" /grant:r "users:(RX)" /C
+Grant Read-only Access of a specific file
+ICACLS "D:\test\test.txt" /grant:r "users:(R)" /C
