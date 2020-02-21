@@ -27,3 +27,15 @@ jenkins ALL=(ALL) NOPASSWD: ALL
 # Allow members of group sudo to execute any command
 %sudo   ALL=(ALL:ALL) ALL
 %jenkins ALL=(ALL:ALL) NOPASSWD:ALL
+
+*** removecontainer.sh ***
+dockerProcesses=`docker ps -a`
+containerID=$(echo "$dockerProcesses" | grep "${CONTAINER_NAME}" | awk '{print $1}')
+if [ ! -z ${containerID} ] ; then
+    echo "${CONTAINER_NAME} is currently running, stopping and removing old container"
+    docker rm -f ${containerID}
+fi
+
+*** Calling removecontainer.sh ***
+CONTAINER_NAME="couchbase" \
+removecontainer.sh
