@@ -113,3 +113,6 @@ Check OS (use either of the below)
 cat /etc/os-release
 lsb_release -a
 hostnamectl
+
+echo output of command to file
+echo `ls -l ../` >> out.txt
