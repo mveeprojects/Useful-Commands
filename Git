@@ -1,3 +1,6 @@
+GitHub link to particular lines of file
+https://github.com/MarkVee87/Useful-Commands/edit/master/Git#L1-L2
+
 Commit changes locally
 git commit -a -m "Commit message goes here"
 
