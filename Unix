@@ -116,3 +116,7 @@ hostnamectl
 
 echo output of command to file
 echo `ls -l ../` >> out.txt
+
+curl with authentication
+curl --user name:password http://www.example.com
+
