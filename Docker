@@ -35,7 +35,7 @@ Delete all local images
 docker rmi $(docker images -q)
 
 Delete all local containers
-docker rm $(docker ps -a -q)
+docker rm $(docker ps -aq)
 
 Save docker image to zip file
 docker save -o <path for generated tar file> <image name>
