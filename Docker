@@ -29,13 +29,10 @@ Remove a stopped container
 docker rm <container_name>
 
 Stop and remove all containers
-docker rm -f $(docker ps -a -q)
+docker rm -f $(docker ps -aq)
 
 Delete all local images
 docker rmi $(docker images -q)
-
-Delete all local containers
-docker rm $(docker ps -aq)
 
 Save docker image to zip file
 docker save -o <path for generated tar file> <image name>
