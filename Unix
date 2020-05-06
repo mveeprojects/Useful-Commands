@@ -120,3 +120,7 @@ echo `ls -l ../` >> out.txt
 curl with authentication
 curl --user name:password http://www.example.com
 
+Read from file and print each line
+while read hostname; do
+  echo "host: $hostname"
+done < hosts.txt
