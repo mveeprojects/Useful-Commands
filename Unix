@@ -127,3 +127,6 @@ done < hosts.txt
 
 Filename to variable
 filename=`basename "$0"`
+
+Watch a process e.g. docker ps, refresh every second
+watch -n1 'docker ps' 
