@@ -124,3 +124,6 @@ Read from file and print each line
 while read hostname; do
   echo "host: $hostname"
 done < hosts.txt
+
+Filename to variable
+filename=`basename "$0"`
