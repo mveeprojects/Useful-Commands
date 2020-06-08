@@ -1,0 +1,11 @@
+vault list <path_to_dir>
+
+vault read <path_to_secret>
+
+cat vaultsecrets.json | vault write <path_to_secret> -
+
+Example JSON to write to vault (vaultsecrets.json):
+{
+  "key1": "value1",
+  "key2": "value2"
+}
