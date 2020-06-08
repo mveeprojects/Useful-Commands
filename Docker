@@ -68,3 +68,7 @@ docker logs --tail 100 <container>
 
 Set DOCKER_CERT_PATH
 export DOCKER_CERT_PATH=~/.docker
+
+Execute command from outside the container
+docker exec <container_name> curl http://localhost:8080
+
