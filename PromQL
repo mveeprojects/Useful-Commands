@@ -1,3 +1,5 @@
+The below is based on the metrics outputted in my sample Scala app -> https://github.com/MarkVee87/ScalaAkkaHttp_StartingPoint
+
 View the cumulative count of metrics per histogram bucket (le)
 span_processing_time_seconds_bucket
 
