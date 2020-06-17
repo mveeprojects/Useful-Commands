@@ -1,5 +1,8 @@
 View the cumulative count of metrics per histogram bucket (le)
-http_request_duration_seconds
+span_processing_time_seconds_bucket
 
 View the increase of metrics per histogram bucket (le) during a give time period (duration)
-increase(http_request_duration_seconds[duration])
+increase(span_processing_time_seconds_bucket[duration])
+
+View the 99th percentile response time during a give time period (duration)
+histogram_quantile(0.99, sum(rate(span_processing_time_seconds_bucket[duration])) by (le))
