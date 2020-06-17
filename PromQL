@@ -6,3 +6,6 @@ increase(span_processing_time_seconds_bucket[duration])
 
 View the 99th percentile response time during a give time period (duration)
 histogram_quantile(0.99, sum(rate(span_processing_time_seconds_bucket[duration])) by (le))
+
+View the average per-second rate of requests per second
+rate(http_server_requests_total[2m])
