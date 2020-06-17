@@ -1,0 +1,5 @@
+View the cumulative count of metrics per histogram bucket (le)
+http_request_duration_seconds
+
+View the increase of metrics per histogram bucket (le) during a give time period (duration)
+increase(http_request_duration_seconds[duration])
