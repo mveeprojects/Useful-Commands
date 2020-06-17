@@ -10,4 +10,5 @@ View the 99th percentile response time during a give time period (2m)
 histogram_quantile(0.99, sum(rate(span_processing_time_seconds_bucket[2m])) by (le))
 
 View the transactions per second during a give time period (2m)
+Wrap the below query in sum() if aggregating metrics from more than one instance
 rate(http_server_requests_total[2m])
