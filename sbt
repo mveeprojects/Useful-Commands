@@ -6,7 +6,7 @@ sbt "testOnly MyTes*"
 sbt "testOnly *NameSpec"
 sbt "testOnly *Name*"
 
-Continually monitor a given set of tests for changes and re-run when changed
+Continually monitor (~) a given set of tests for changes and re-run when changed
 sbt "~testOnly MyTes*"
 
 Run all test classes in a specific package using matcher (wildcard)
