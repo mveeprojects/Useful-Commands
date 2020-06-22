@@ -13,7 +13,7 @@ Run all test classes in a specific package using matcher (wildcard)
 sbt "~testOnly com.my.package*"
 
 Run all test classes based on a matcher (wildcard) in a specific package
-sbt "testOnly com.my.package.MyTest*"
+sbt "~testOnly com.my.package.MyTest*"
 
 Run all test classes based on a matcher (wildcard) without specifying package
-sbt "testOnly *MyTest*"
+sbt "~testOnly *MyTest*"
