@@ -1,0 +1,2 @@
+Completely redeploy a deployment
+kubectl -n service rollout restart deployment <deployment_name>
