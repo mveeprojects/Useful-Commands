@@ -9,6 +9,9 @@ docker ps -a
 Show all images available locally
 docker images
 
+Run a docker container with a given name
+docker run -d --name <container_name>
+
 Run commands on a remote host with TLS certs
 docker --tlsverify -H <IP:Port/Hostname> <command>
 E.g. docker --tlsverify -H marksserver.com ps
