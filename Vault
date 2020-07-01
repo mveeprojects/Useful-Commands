@@ -1,9 +1,14 @@
+List directories in vault
 vault list <path_to_dir>
 
+Read a particular leaf directories' secrets
 vault read <path_to_secret>
 
-cat vaultsecrets.json | vault write <path_to_secret> -
+Write multiple keys to vault in one line
+vault write <path_to_secret> "key1": "value1" "key2": "value2"
 
+Write the contents of a JSON file to vault
+cat vaultsecrets.json | vault write <path_to_secret> -
 Example JSON to write to vault (vaultsecrets.json):
 {
   "key1": "value1",
