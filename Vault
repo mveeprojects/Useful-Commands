@@ -14,3 +14,8 @@ Example JSON to write to vault (vaultsecrets.json):
   "key1": "value1",
   "key2": "value2"
 }
+
+OR
+
+Write directly from a file (@ notation to reference file)
+vault write <path_to_secret> @vaultsecrets.json
