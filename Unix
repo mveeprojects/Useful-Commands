@@ -129,4 +129,8 @@ Filename to variable
 filename=`basename "$0"`
 
 Watch a process e.g. docker ps, refresh every second
-watch -n1 'docker ps' 
+watch -n1 'docker ps'
+
+Run cURL with tracing (includes headers etc. which are not included when using -vvv)
+curl http://google.com --trace-ascii -
+
