@@ -19,3 +19,6 @@ OR
 
 Write directly from a file (@ notation to reference file)
 vault write <path_to_secret> @vaultsecrets.json
+
+Read secret and decode from base64 at the same time
+vault read -field=<field_name_inside_secret> <path_to_secret> | base64 -D
