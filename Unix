@@ -134,3 +134,6 @@ watch -n1 'docker ps'
 Run cURL with tracing (includes headers etc. which are not included when using -vvv)
 curl http://google.com --trace-ascii -
 
+Find all unique lines in a file
+sort -u test.txt
+
