@@ -137,3 +137,6 @@ curl http://google.com --trace-ascii -
 Find all unique lines in a file
 sort -u test.txt
 
+vi/vim show line numbers
+:set number
+
