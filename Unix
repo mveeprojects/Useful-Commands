@@ -140,3 +140,7 @@ sort -u test.txt
 vi/vim show line numbers
 :set number
 
+
+Find out when all files in a directory were last modified (in reverse order)
+find directoryname/ -type f -printf '%TY-%Tm-%Td %TT %p\n' | sort -r
+
