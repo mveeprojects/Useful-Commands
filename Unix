@@ -142,3 +142,7 @@ vi/vim show line numbers
 
 Find out when all files in a directory were last modified (in reverse order)
 find directoryname/ -type f -printf '%TY-%Tm-%Td %TT %p\n' | sort -r
+
+Loop through all files matching a filename pattern (access_log*) in the current directory and execute a command against each
+for file in access_log* ; do cat $file | grep GET ; done
+
