@@ -18,3 +18,9 @@ kubectl get deployments
 
 Scale a deployment to 0
 kubectl scale deployment deployment_name --replicas 0
+
+View all contexts
+kubectl config get-contexts
+
+Switch context
+kubectl config use-context <context-name>
