@@ -146,3 +146,5 @@ find directoryname/ -type f -printf '%TY-%Tm-%Td %TT %p\n' | sort -r
 Loop through all files matching a filename pattern (access_log*) in the current directory and execute a command against each
 for file in access_log* ; do cat $file | grep GET ; done
 
+Trim all quotes from input
+<input> | tr -d '"'
