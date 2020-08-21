@@ -137,6 +137,9 @@ curl http://google.com --trace-ascii -
 Find all unique lines in a file
 sort -u test.txt
 
+Find all lines with unique first column (-k1) with comma delimiter (-t,) - useful for sorting through csv files
+sort -u -t, -k1,1 test.csv
+
 vi/vim show line numbers
 :set number
 
