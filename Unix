@@ -151,3 +151,13 @@ for file in access_log* ; do cat $file | grep GET ; done
 
 Trim all quotes from input
 <input> | tr -d '"'
+
+for loop [@] vs [*] vs without
+my_array=(foo bar)
+for i in "${my_array[@]}"; do echo "$i"; done
+foo
+bar
+for i in "${my_array[*]}"; do echo "$i"; done
+foo bar
+for i in "${my_array}"; do echo "$i"; done
+foo
