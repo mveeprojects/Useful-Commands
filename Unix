@@ -154,10 +154,10 @@ Trim all quotes from input
 
 for loop [@] vs [*] vs without
 my_array=(foo bar)
-for i in "${my_array[@]}"; do echo "$i"; done
+for i in "${my_array[@]}"; do echo "$i"; done # each element
 foo
 bar
-for i in "${my_array[*]}"; do echo "$i"; done
+for i in "${my_array[*]}"; do echo "$i"; done # all elements
 foo bar
-for i in "${my_array}"; do echo "$i"; done
+for i in "${my_array}"; do echo "$i"; done # first element
 foo
