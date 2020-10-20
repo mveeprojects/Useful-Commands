@@ -1,7 +1,6 @@
 Useful Commands for Linux
 
 Generate ssh keys
-
 ssh-keygen -t rsa
 
 Find processes running on a particular ports
