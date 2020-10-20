@@ -1,6 +1,7 @@
 Useful Commands for Linux
 
 Generate ssh keys
+
 ssh-keygen -t rsa
 
 Find processes running on a particular ports
@@ -161,3 +162,9 @@ for i in "${my_array[*]}"; do echo "$i"; done # gather all elements into a singl
 foo bar
 for i in "${my_array}"; do echo "$i"; done # only use first element
 foo
+
+Find lines in file that do not contain a given string (grep -v) and send to another file
+cat <input_file_name> | grep -v <string_to_ignore> > <output_file_name>
+
+
+
