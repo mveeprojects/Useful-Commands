@@ -6,3 +6,6 @@ Ctrl + shift + g
 
 Install on Linux (tar.gz)
 https://thishosting.rocks/install-java-ubuntu/
+
+If you do not have the option to create Scala class
+Right click on your project, "Add Framework support" and choose Scala framework
