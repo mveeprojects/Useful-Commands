@@ -6,7 +6,7 @@
 
 #### Spoiler with code snippet
 <details><summary>Some summary</summary>
-<!-- make sure there is an empty newline here -->
+
 ```json
 {
   name: "mark",
