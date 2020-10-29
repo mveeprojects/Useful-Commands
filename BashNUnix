@@ -173,3 +173,6 @@ history -d line_number
 
 remove entire history
 history -c
+
+Gzip and keep local file
+gzip -k filename
