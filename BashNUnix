@@ -167,3 +167,9 @@ cat <input_file_name> | grep -v <string_to_ignore> > <output_file_name>
 
 At date and time to history command
 export HISTTIMEFORMAT="%d/%m/%y %T "
+
+remove line from history
+history -d line_number
+
+remove entire history
+history -c
