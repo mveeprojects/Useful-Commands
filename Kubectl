@@ -24,3 +24,6 @@ kubectl config get-contexts
 
 Switch context
 kubectl config use-context <context-name>
+
+Copy from running pod to local
+kubectl cp pod_name:/path/filename /path/filename
