@@ -75,3 +75,5 @@ export DOCKER_CERT_PATH=~/.docker
 Execute command from outside the container
 docker exec <container_name> curl http://localhost:8080
 
+Change tag for an image
+docker tag current_image_name:tag new_image_name:tag
