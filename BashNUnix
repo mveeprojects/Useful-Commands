@@ -78,6 +78,11 @@ sudo [yum|apt-get] install -y net-tools
 Install telnet if missing
 sudo [yum|apt-get] install -y telnet|telnet-server
 
+Install telnet if missing (Alpine)
+apk update
+apk add busybox-extras
+busybox-extras telnet host port
+
 Switch to root user and stay in same directory
 sudo -s
 
