@@ -75,10 +75,10 @@ zip -r my.zip .
 Install ifconfig if missing
 sudo [yum|apt-get] install -y net-tools
 
-Install telnet if missing
+Install telnet (non-Alpine/apk)
 sudo [yum|apt-get] install -y telnet|telnet-server
 
-Install telnet if missing (Alpine)
+Install and use telnet (Alpine)
 apk update
 apk add busybox-extras
 busybox-extras telnet host port
