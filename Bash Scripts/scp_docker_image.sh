@@ -9,6 +9,6 @@ declare serverIpList StringArray=(
 
 for ip in ${StringArray[@]}; do
    echo Copying docker image via scp to $ip
-   scp -i ~/.ssh/slt.pem ~/Desktop/wiremockimage.tar username@$ip:wiremockimage.tar
-   ssh -i ~/.ssh/slt.pem -t username@$ip 'docker load -i wiremockimage.tar'
+   scp ~/Desktop/wiremockimage.tar username@$ip:wiremockimage.tar
+   ssh -t username@$ip 'docker load -i wiremockimage.tar'
 done
