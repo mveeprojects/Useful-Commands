@@ -181,3 +181,6 @@ history -c
 
 Gzip and keep local file
 gzip -k filename
+
+Result of previous command
+$?
