@@ -12,3 +12,6 @@ Right click on your project, "Add Framework support" and choose Scala framework
 
 Change colour of comments etc.
 (cmd + ,) -> Editor -> Color Scheme -> Language Defaults
+
+Change terminal from using sh to bash
+cmd + comma -> Tools -> Terminal -> Shell Path
