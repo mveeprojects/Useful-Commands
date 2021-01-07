@@ -15,3 +15,6 @@ Change colour of comments etc.
 
 Change terminal from using sh to bash
 cmd + comma -> Tools -> Terminal -> Shell Path
+
+Switch formatter to scalafmt
+cmd + comma -> Editor -> Code Style -> Scala -> Formatter dropdown
