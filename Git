@@ -25,6 +25,9 @@ git push origin -u new-name
 Delete old remote branch and push newly renamed branch
 git push origin :old-name new-name
 
+Delete branch from remote
+git push origin --delete feature/login
+
 Update all repos inside current dir
 find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
 
