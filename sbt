@@ -1,6 +1,9 @@
 See what version of sbt you are using
 sbt sbtVersion
 
+To see even more sbt information about your project
+sbt about
+
 Run a single test class
 sbt "testOnly MyTestClassNameSpec"
 
