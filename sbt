@@ -1,3 +1,6 @@
+See what version of sbt you are using
+sbt sbtVersion
+
 Run a single test class
 sbt "testOnly MyTestClassNameSpec"
 
