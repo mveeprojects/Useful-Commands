@@ -188,5 +188,5 @@ $?
 set current directory to a varable
 readonly dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-bring in functions from another .sh file using above variable
-source source ${dir}/otherfunctions.sh
+bring in functions from another .sh file in a location relative to the script you're running
+source ${dir}/otherfunctions.sh
