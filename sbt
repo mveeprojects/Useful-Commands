@@ -23,3 +23,6 @@ sbt "testOnly com.my.package.MyTest*"
 
 Run all test classes based on a matcher (wildcard) without specifying package
 sbt "testOnly *MyTest*"
+
+Calculate the entire dependency tree and output to file
+sbt dependencyTree > deptree.txt
