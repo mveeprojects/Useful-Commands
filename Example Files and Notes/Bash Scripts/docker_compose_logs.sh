@@ -10,7 +10,7 @@ if [ ! -z "$containerId" ] ; then
    docker logs -f $containerId
 fi
 
-# This can also be added as a function to the bash_profile/bash_rc
+# This can also be added as a function to bash_profile/bash_rc
 # Usage: "dclog uniquestring"
 #
 # dclog(){
