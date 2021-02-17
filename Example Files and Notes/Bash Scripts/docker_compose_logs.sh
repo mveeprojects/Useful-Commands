@@ -10,3 +10,14 @@ readonly containerId=$(echo "$dockerProcesses" | grep $1 | awk '{print $1}')
 if [ ! -z "$containerId" ] ; then
    docker logs -f $containerId
 fi
+
+# This can also be added as a function to the bash_profile/bash_rc:
+# dclog(){
+#   unset dockerProcesses
+#   unset containerId
+#   export dockerProcesses=`docker ps`
+#   export containerId=$(echo "$dockerProcesses" | grep $1 | awk '{print $1}')
+#   if [ ! -z "$containerId" ] ; then
+#     docker logs -f $containerId
+#   fi
+# }
