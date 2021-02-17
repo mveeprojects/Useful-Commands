@@ -5,7 +5,6 @@
 
 readonly dockerProcesses=`docker ps`
 readonly containerId=$(echo "$dockerProcesses" | grep $1 | awk '{print $1}')
-
 if [ ! -z "$containerId" ] ; then
    docker logs -f $containerId
 fi
