@@ -18,3 +18,6 @@ cmd + comma -> Tools -> Terminal -> Shell Path
 
 Switch formatter to scalafmt
 cmd + comma -> Editor -> Code Style -> Scala -> Formatter dropdown
+
+Run JavaAgent alongside app
+VM Options -> -javaagent:<javaagentpathfromrootofproject>
