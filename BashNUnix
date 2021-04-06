@@ -169,7 +169,7 @@ foo
 Find lines in file that do not contain a given string (grep -v) and send to another file
 cat <input_file_name> | grep -v <string_to_ignore> > <output_file_name>
 
-At date and time to history command
+Add date and time to history command
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
 remove line from history
