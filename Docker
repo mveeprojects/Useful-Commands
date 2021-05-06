@@ -46,7 +46,7 @@ docker load -i <path to image tar file>
 Copy a file into a docker container
 docker cp hello.txt myContainerName:/dir/path/goes/here
 
-Copy file from remote docker container to local
+Copy directory from remote docker container to local
 docker --tlsverify -H remote_docker_hostname cp container_name:/dir_name /some/local/path/dir_name
 
 Run a bash command inside a running container and detach
