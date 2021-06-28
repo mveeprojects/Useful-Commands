@@ -1,0 +1,58 @@
+https://www.scala-sbt.org/1.x/docs/index.html
+
+PluralSight course notes:
+
+build definition file - build.sbt
+
+project dir - contains build support files
+
+build.properties sets expected version of sbt
+
+scalaVersion - useful command for checking the version of Scala used in this project
+
+sbt run arg1 arg2 - sbt run injecting arguments (space separated)
+
+multiple commands - prepend with semicolon and separate with a space e.g. ;clean ;compile
+
+console - command to use the Scala REPL (console)
+
+Objectname.main(Array("arg1", "arg2")) - run a given main method with arguments in the REPL
+
+sourceDirectories - show where sbt looks for source files
+
+scalaSource - refines the above output to only Scala source files
+
+baseDirectory - show the base dir of the project
+
+:= assignment operator
+
+SettingKey[T] - evaluated once per project load
+
+TaskKey[T] - recomputed every time called
+
+InputKey[T] - accepts command-line arguments (e.g. run)
+
+[settings|tasks] -V - show all tasks/settings
+
+defining a custom setting:
+lazy val mySetting = settingKey[String]("description of this setting")
+mySetting := "Hello, World!"
+
+defining a custom task:
+val randomInt = taskKey[Int]("Give me a random number")
+randomInt = scala.util.Random.nextInt
+show randomInt = task needs to be run to be computed
+
+settings cannot depend upon tasks as these are repeatedly reevaluated
+
+task can depend on setting, to get the value of a setting it is just mySettingName.value
+
+myProjectName/Test/run - run main class under src/test
+
+myProjectName/runMain MyClassName - specify the main method you explicitly want to run
+
+libraryDependencies ++= Seq(...) - add a Sequence of dependencies
+
+libraryDependencies += (...) - add a single dependency
+
+Test/parallelExecution - shows if parallel execution is enabled in each project, default is true (enabled)
