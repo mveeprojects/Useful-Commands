@@ -63,6 +63,9 @@ export DOCKER_API_VERSION=1.23
 Docker cp multiple files at once (whole db dir)
 for f in /data/db/*; do docker cp $f mongo:/data/db/; done
 
+Remove all docker networks forcefully (no need to respond to y/n prompt)
+docker network prune -f
+
 Prune stopped containers. unused networks, dangling images, dangling build cache
 docker system prune
 
