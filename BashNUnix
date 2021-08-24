@@ -82,6 +82,9 @@ Install telnet (Alpine)
 apk update
 apk add busybox-extras
 
+Use nc (netcat) to quickly check connectivity with an external host
+nc -v -z hostname port
+
 Switch to root user and stay in same directory
 sudo -s
 
