@@ -100,6 +100,12 @@ python -m SimpleHTTPServer 4001
 curl without body in response (supress body to /dev/null pseudo-file)
 curl www.google.com -s -o /dev/null
 
+Useful curl flags:
+--silent suppresses the download-in-progress stats (but will still show HTML output)
+--output /dev/null hides successful output
+--show-error shows errors, even when silent mode is enabled
+--fail will raise an error if HTTP response is an error code (404, 500 etc.) instead of merely DNS/TCP errors.
+
 View all users 
 cat /etc/passwd
 
