@@ -97,15 +97,6 @@ echo "Hello, World"  | nc -l 4001
 Start a simple http server (can be accessed via browser or curl e.g. "localhost:4001/index.html" or "curl -v localhost:4001/index.html")
 python -m SimpleHTTPServer 4001
 
-curl without body in response (supress body to /dev/null pseudo-file)
-curl www.google.com -s -o /dev/null
-
-Useful curl flags:
---silent suppresses the download-in-progress stats (but will still show HTML output)
---output /dev/null hides successful output
---show-error shows errors, even when silent mode is enabled
---fail will raise an error if HTTP response is an error code (404, 500 etc.) instead of merely DNS/TCP errors.
-
 View all users 
 cat /etc/passwd
 
@@ -133,9 +124,6 @@ hostnamectl
 echo output of command to file
 echo `ls -l ../` >> out.txt
 
-curl with authentication
-curl --user name:password http://www.example.com
-
 Read from file and print each line
 while read hostname; do
   echo "host: $hostname"
@@ -146,9 +134,6 @@ filename=`basename "$0"`
 
 Watch a process e.g. docker ps, refresh every second
 watch -n1 'docker ps'
-
-Run cURL with tracing (includes headers etc. which are not included when using -vvv)
-curl http://google.com --trace-ascii -
 
 Find all unique lines in a file
 sort -u test.txt
