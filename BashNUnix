@@ -26,9 +26,6 @@ du -hs */ .*/ | sort -n
 Simpler way of finding large directories and ordering
 du -hsc * | sort -h
 
-[Python] Prettify JSON and output to new file
-python -m json.tool someUnformattedJson.json >> mark.json
-
 Add alias for command (redHat .bashrc else .bash_profile)
 sudo nano/vi/vim .bashrc/.bash_profile
 alias x='somecommand'
@@ -93,9 +90,6 @@ set -x
 
 Open a port that displays a simple message (access via only e.g. "curl -v localhost:4001")
 echo "Hello, World"  | nc -l 4001
-
-Start a simple http server (can be accessed via browser or curl e.g. "localhost:4001/index.html" or "curl -v localhost:4001/index.html")
-python -m SimpleHTTPServer 4001
 
 View all users 
 cat /etc/passwd
