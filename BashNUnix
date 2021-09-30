@@ -60,12 +60,6 @@ find . -type f -delete
 Find and delete empty files from current dir down
 find . -type f -empty -delete -print
 
-Delete all json files in dir when argument list is too long for rm -rf *.json
-for f in *.json; do sudo rm -rf "$f"; done
-
-Make 100 copies of a file with number added to the name
-for f in {1..100}; do cp some-file.json some-file-$f.json; done
-
 Zipping when argument list is too long (omit -xvf etc)
 zip -r my.zip .
 
@@ -88,7 +82,7 @@ sudo -s
 Run this before running a bash script to show all executed steps (good for debugging bash scripts)
 set -x
 
-Open a port that displays a simple message (access via only e.g. "curl -v localhost:4001")
+Open a port that displays a simple message (accessible via "curl -v localhost:4001")
 echo "Hello, World"  | nc -l 4001
 
 View all users 
@@ -118,11 +112,6 @@ hostnamectl
 echo output of command to file
 echo `ls -l ../` >> out.txt
 
-Read from file and print each line
-while read hostname; do
-  echo "host: $hostname"
-done < hosts.txt
-
 Filename to variable
 filename=`basename "$0"`
 
@@ -141,21 +130,8 @@ vi/vim show line numbers
 Find out when all files in a directory were last modified (in reverse order)
 find directoryname/ -type f -printf '%TY-%Tm-%Td %TT %p\n' | sort -r
 
-Loop through all files matching a filename pattern (access_log*) in the current directory and execute a command against each
-for file in access_log* ; do cat $file | grep GET ; done
-
 Trim all quotes from input
 <input> | tr -d '"'
-
-for loop [@] vs [*] vs without
-my_array=(foo bar)
-for i in "${my_array[@]}"; do echo "$i"; done # treat each element as a seperate string
-foo
-bar
-for i in "${my_array[*]}"; do echo "$i"; done # gather all elements into a single string
-foo bar
-for i in "${my_array}"; do echo "$i"; done # only use first element
-foo
 
 Find lines in file that do not contain a given string (grep -v) and send to another file
 cat <input_file_name> | grep -v <string_to_ignore> > <output_file_name>
