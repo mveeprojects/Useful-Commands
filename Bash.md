@@ -1,10 +1,14 @@
 # Bash
 
 ### Delete all json files in dir when argument list is too long for rm -rf *.json
-`for f in *.json; do sudo rm -rf "$f"; done`
+```shell
+for f in *.json; do sudo rm -rf "$f"; done
+```
 
 ### Make 100 copies of a file with number added to the name
-`for f in {1..100}; do cp some-file.json some-file-$f.json; done`
+```shell
+for f in {1..100}; do cp some-file.json some-file-$f.json; done
+```
 
 ### Read from file and print each line
 ```shell
@@ -13,7 +17,9 @@ while read hostname; do
 done < hosts.txt
 ```
 ### Loop through all files matching a filename pattern (access_log*) in the current directory and execute a command against each
-`for file in access_log* ; do cat $file | grep GET ; done`
+```shell
+for file in access_log* ; do cat $file | grep GET ; done
+```
 
 ### for loop [@] vs [*] vs without
 ```shell

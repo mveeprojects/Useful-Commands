@@ -1,37 +1,57 @@
 # Git/GitHub
 
 ### GitHub link to particular lines of file
-`github.com/MarkVee87/Useful-Commands/blob/master/Git#L1-L2`
+https://github.com/mveeprojects/Useful-Commands/blob/master/Git.md#L1-L2
 
 ### Commit changes locally
-`git commit -a -m "Commit message goes here"`
+```shell
+git commit -a -m "Commit message goes here"
+```
 
 ### View remote endpoint of repo (determine if ssh or https)
-`git remote -v`
+```shell
+git remote -v
+```
 
 ### Set remote to https
-`git remote set-url origin https://github.com:MarkVee87/springBoot_StartingPoint.git`
+```shell
+git remote set-url origin https://github.com:MarkVee87/springBoot_StartingPoint.git
+```
 
 ### Set remote to ssh
-`git remote set-url origin git@github.com:MarkVee87/springBoot_StartingPoint.git`
+```shell
+git remote set-url origin git@github.com:MarkVee87/springBoot_StartingPoint.git
+```
 
 ### Rename branch locally (when on branch)
-`git branch -m new-name`
+```shell
+git branch -m new-name
+```
 
 ### Rename branch locally (when on different branch)
-`git branch -m old-name new-name`
+```shell
+git branch -m old-name new-name
+```
 
 ### Push newly named branch
-`git push origin -u new-name`
+```shell
+git push origin -u new-name
+```
 
 ### Delete old remote branch and push newly renamed branch
-`git push origin :old-name new-name`
+```shell
+git push origin :old-name new-name
+```
 
 ### Delete branch from remote
-`git push origin --delete feature/login`
+```shell
+git push origin --delete feature/login
+```
 
 ### Update all repos inside current dir
-`find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;`
+```shell
+find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
+```
 
 ### In the case that, as a result of changing the branch name, can no longer push/pull from origin do this:
 ```shell
@@ -48,10 +68,16 @@ git push --mirror https://github.com/exampleuser/new-repository.git
 ```
 
 ### Squash and merge branch in current branch
-`git merge --squash <branch-to-squash-and-merge>`
+```shell
+git merge --squash <branch-to-squash-and-merge>
+```
 
 ### Stash all including untracked
-`git stash --all`
+```shell
+git stash --all
+```
 
 ### Reset to head
-`git reset --hard HEAD`
+```shell
+git reset --hard HEAD
+```
