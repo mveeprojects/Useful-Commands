@@ -2,7 +2,12 @@
 
 ### Enable/Disable auto import (maven)
 ```
-cmd + , -> "Build, Execution, Deployment" -> "Build Tools" -> "Maven" -> "importing" -> "Import Maven projects automatically"
+⌘ + , -> "Build, Execution, Deployment" -> "Build Tools" -> "Maven" -> "importing" -> "Import Maven projects automatically"
+```
+
+### Configure trusted locations
+```
+Settings/Preferences dialog ⌘ + , "Build, Execution, Deployment" -> "Trusted Locations"
 ```
 
 ### Convert Java class to Scala object
