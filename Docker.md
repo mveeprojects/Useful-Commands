@@ -136,3 +136,8 @@ docker exec <container_name> curl http://localhost:8080
 ```shell
 docker tag <current_image_name>:<tag> <new_image_name>:<tag>
 ```
+
+### Pass a build arg into Dockerfile (ARG)
+```shell
+docker build --build-arg <key>=<value> .
+```
