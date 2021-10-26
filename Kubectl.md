@@ -49,3 +49,8 @@ kubectl config use-context <context-name>
 ```shell
 kubectl cp pod_name:/path/filename /path/filename
 ```
+
+### View all events in order
+```shell
+kubectl -n <namespace> get events --sort-by=.metadata.creationTimestamp
+```
