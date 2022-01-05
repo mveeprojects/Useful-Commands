@@ -1,5 +1,6 @@
 #### Superscript with link to anchor point (good for references/sources)
-<sup>[1](#1)</sup>
+> This repo is maintained by mveeprojects <sup>[1](#1)</sup>
+
 <a name="1">[1]</a> [mveeprojects profile page](https://github.com/mveeprojects)
 
 #### Spoiler with code snippet
