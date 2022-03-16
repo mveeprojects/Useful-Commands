@@ -1,5 +1,10 @@
 # Mongo
 
+### Run Mongo container
+```shell
+docker run -d --name mongo -p "27017:27017" --restart always mongo
+```
+
 ### Show all available DBs
 ```shell
 show dbs
