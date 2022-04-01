@@ -11,7 +11,7 @@ fi
 
 # This can also be added as a function in bash_profile/bash_rc
 # Usage: "dclog uniquestring"
-#
+
 dclog(){
   unset dockerProcesses
   unset containerId
