@@ -4,8 +4,8 @@ Useful functions to add to bash_profile/bashrc/zshrc/etc.
 
 ### Get PID of process running on a given port
 ```shell
-# Usage: checkPort port_number
-checkPort() {
+# Usage: checkport port_number
+checkport() {
   readonly lsofcmd=`lsof -i tcp:$1`
   if [ ! -z "$lsofcmd" ] ; then
      readonly pidfromlsof=$(echo "$lsofcmd" | awk '{print $2}')
