@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# based on: https://stackoverflow.com/a/54099479/3059314
+
 # Make sure you run this beforehand to enable execution "chmod +x dockerlogs.sh"
 # Usage: "./dockerlogs.sh uniquestring"
 #   - The "uniquestring" must be a completely unique part of the docker ps output else the "logs -f" command will fail
