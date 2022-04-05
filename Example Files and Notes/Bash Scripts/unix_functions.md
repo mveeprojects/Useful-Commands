@@ -2,15 +2,21 @@
 
 Useful functions to add to bash_profile/bashrc/zshrc/etc.
 
-### Check what's running on a given port
+### Get PID of process running on a given port
 ```shell
 # Usage: checkPort port_number
 checkPort() {
-  lsof -i tcp:$1
+  readonly lsofcmd=`lsof -i tcp:$1`
+  if [ ! -z "$lsofcmd" ] ; then
+     readonly pidfromlsof=$(echo "$lsofcmd" | awk '{print $2}')
+     echo $pidfromlsof
+  else
+    echo "nothing running on port $1"
+  fi
 }
 ```
 
-### Stop a process by pid
+### Stop a process by PID
 ```shell
 # Usage: killprocess some_pid
 killprocess() {
