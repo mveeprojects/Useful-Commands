@@ -21,7 +21,7 @@ kafka-consumer-groups --bootstrap-server kafka.moffatt.me:9092 --describe --grou
 kafka-consumer-groups --bootstrap-server kafka.moffatt.me:9092 --group <consumer_group> --reset-offsets --all-topics --to-earliest
 ```
 
-### Run kcat (formerly kafkacat) container to connect to Kafka broker on custom bridge network and list topics
+### Run [kcat](https://github.com/edenhill/kcat) (formerly kafkacat) container to connect to Kafka broker on custom bridge network and list topics
 ```shell
 docker run -it --network=my-network edenhill/kcat:1.7.1 -b kafka-container-name:9092 -L
 ```
