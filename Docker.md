@@ -17,12 +17,12 @@ docker images
 
 ### Run a docker container with a given name
 ```shell
-docker run -d <image_name> --name <container_name>`
+docker run -d <image_name> --name <container_name>
 ```
 
 ### Run commands on a remote host with TLS certs
 ```shell
-docker --tlsverify -H <IP:Port/Hostname> <command>`
+docker --tlsverify -H <IP:Port/Hostname> <command>
 ```
 
 ### Build image based on DockerFile in current directory
