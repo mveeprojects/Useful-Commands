@@ -25,3 +25,8 @@ kafka-consumer-groups --bootstrap-server kafka.moffatt.me:9092 --group <consumer
 ```shell
 docker run -it --network=my-network edenhill/kcat:1.7.1 -b kafka-container-name:9092 -L
 ```
+
+### kcat publish to topic (interactive, ctrl-D to exit) from confluent docs [here](https://docs.confluent.io/platform/current/app-development/kafkacat-usage.html#producer-mode)
+```shell
+docker run -it --network=my-network edenhill/kcat:1.7.1 -b kafka-container-name:9092 -t test-topic -P
+```
