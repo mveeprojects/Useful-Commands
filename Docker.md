@@ -141,3 +141,8 @@ docker tag <current_image_name>:<tag> <new_image_name>:<tag>
 ```shell
 docker build --build-arg <key>=<value> .
 ```
+
+### Detail healthcheck output of a container
+```shell
+docker inspect --format='{{json .State.Health}}' <container>
+```
