@@ -5,6 +5,16 @@
 curl --user name:password http://www.example.com
 ```
 
+### Perform a cURL request including a request header
+```shell
+curl http://www.example.com -H "Content-Type: application/json"
+```
+
+### Perform a cURL request including a request body
+```shell
+curl -X POST http://www.example.com -H "Content-Type: application/json" --data '{"keyA": "valueA", "keyB": "valueB", "objectA": {"keyC": "valueC"}}'
+```
+
 ### Perform a cURL request with tracing (includes headers etc. which are not included when using -vvv)
 ```shell
 curl http://google.com --trace-ascii -
