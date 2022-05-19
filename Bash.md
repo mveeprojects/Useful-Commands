@@ -1,5 +1,12 @@
 # Bash
 
+### Decode base64
+```shell
+echo some_base_64== | base64 --decode
+# Or, to include the newline character
+echo `echo some_base_64== | base64 --decode`
+```
+
 ### Delete all json files in dir when argument list is too long for rm -rf *.json
 ```shell
 for f in *.json; do sudo rm -rf "$f"; done
