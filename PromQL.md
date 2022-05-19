@@ -23,7 +23,7 @@ Wrap the below query in sum() if aggregating metrics from more than one instance
 rate(http_server_requests_total[2m])
 ```
 
-### View a sum of a given metric (e.g. `up`), with a filter, grouped by a particular field
+### View a sum of a given metric (e.g. `up`), with a filter, grouped by a particular label
 ```shell
-sum(up{some_key_to_filter_on=~".*value_contains.*"}) by (field_to_group_by)
+sum(up{some_label_to_filter_on=~".*value_contains.*"}) by (label_to_group_by)
 ```
