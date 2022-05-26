@@ -54,3 +54,13 @@ kubectl cp pod_name:/path/filename /path/filename
 ```shell
 kubectl -n <namespace> get events --sort-by=.metadata.creationTimestamp
 ```
+
+### View configmap
+```shell
+kubectl -n <namespace> describe cm <configmap-name> -o yaml
+```
+
+### Edit configmap (vi[m] editor)
+```shell
+kubectl -n <namespace> edit configmap <configmap-name>
+```
