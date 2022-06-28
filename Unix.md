@@ -256,3 +256,13 @@ readonly dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ```shell
 source ${dir}/otherfunctions.sh
 ```
+
+### base64 encode latest item on clipboard
+```shell
+pbpaste | base64
+```
+
+### base64 decode latest item on clipboard
+```shell
+pbpaste | base64 -d
+```
