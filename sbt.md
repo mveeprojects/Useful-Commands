@@ -60,3 +60,8 @@ sbt dependencyTree > deptree.txt
 dependencyBrowseGraph # (Graph in the browser)
 dependencyBrowseTree # (Searchable listing of deps in the browser)
 ```
+
+### View dependencies evicted by sbt
+```shell
+sbt evicted
+```
