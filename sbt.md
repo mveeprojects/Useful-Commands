@@ -42,7 +42,21 @@ sbt "testOnly com.my.package.MyTest*"
 sbt "testOnly *MyTest*"
 ```
 
+### Add dependency tree plugin (SBT < 1.4)
+```shell
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.10.0-RC1")
+```
+
+### Add dependency tree plugin (SBT >= 1.4 (built-in support))
+```shell
+addDependencyTreePlugin
+```
+
 ### Calculate the entire dependency tree and output to file
 ```shell
 sbt dependencyTree > deptree.txt
+
+# Alternatives
+dependencyBrowseGraph # (Graph in the browser)
+dependencyBrowseTree # (Searchable listing of deps in the browser)
 ```
