@@ -65,3 +65,14 @@ dependencyBrowseTree # (Searchable listing of deps in the browser)
 ```shell
 sbt evicted
 ```
+
+### Run sbt in debug mode
+```shell
+sbt -d | sbt --debug
+```
+
+### "Cannot find or load main class: not"
+```
+Was in my case down to have an incorrectly configured environment variable (SBT_OPTS)
+Updated SBT_OPTS in my .zshrc to -> export SBT_OPTS="-Xmx2G -XX:+CMSClassUnloadingEnabled -Xss2M -Duser.timezone=GMT"
+```
