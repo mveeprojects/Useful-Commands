@@ -25,12 +25,12 @@ docker run -d <image_name> --name <container_name>
 docker --tlsverify -H <IP:Port/Hostname> <command>
 ```
 
-### Build image based on DockerFile in current directory
+### Build image based on a Dockerfile in current directory
 ```shell
 docker build .
 ```
 
-### Build image based on DockerFile in a different directory (with tag)
+### Build image based on a Dockerfile in a different directory (with tag)
 ```shell
 docker build . -t some_tag --file some_directory/Dockerfile
 ```
