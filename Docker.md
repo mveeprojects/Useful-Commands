@@ -30,6 +30,11 @@ docker --tlsverify -H <IP:Port/Hostname> <command>
 docker build .
 ```
 
+### Build image based on DockerFile in a different directory (with tag)
+```shell
+docker build . -t some_tag --file some_directory/Dockerfile
+```
+
 ### Run an image and map container port to a port on the host machine
 ```shell
 docker run -p <host_port>:<container_port> -d <image_id>
