@@ -10,6 +10,11 @@ sbt sbtVersion
 sbt about
 ```
 
+### Run tests in a specific module/sub-project
+```shell
+sbt sbt_project_name/test
+```
+
 ### Run a single test class
 ```shell
 sbt "testOnly MyTestClassNameSpec"
