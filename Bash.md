@@ -23,6 +23,14 @@ while read hostname; do
   echo "host: $hostname"
 done < hosts.txt
 ```
+
+### Read from file containing a list of curls and run each of them
+```shell
+while read curlCommand; do
+  eval "$curlCommand"
+done < curls.txt
+```
+
 ### Loop through all files matching a filename pattern (access_log*) in the current directory and execute a command against each
 ```shell
 for file in access_log* ; do cat $file | grep GET ; done
