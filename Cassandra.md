@@ -34,3 +34,8 @@ select * from table_name where field_name='field_value' limit 1;
 ```shell
 select * from table_name where non_pk_field_name='field_value' allow filtering;
 ```
+
+### Make output of Cassandra commands a bit prettier
+```shell
+EXPAND ON;
+```
