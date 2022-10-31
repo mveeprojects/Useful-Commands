@@ -24,3 +24,13 @@ describe tables;
 ```shell
 select * from table_name;
 ```
+
+### SELECT statement with WHERE and LIMIT
+```shell
+select * from table_name where field_name='field_value' limit 1;
+```
+
+### SELECT statement with WHERE on non-PK field (allow filtering)
+```shell
+select * from table_name where non_pk_field_name='field_value' allow filtering;
+```
