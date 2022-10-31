@@ -10,6 +10,11 @@ docker exec -it cassandra_container_name_or_id cqlsh
 describe keyspaces
 ```
 
+### Use a keyspace
+```shell
+use keyspace_name;
+```
+
 ### Show all tables
 ```shell
 describe tables;
