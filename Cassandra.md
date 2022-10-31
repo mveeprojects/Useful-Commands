@@ -20,6 +20,11 @@ use keyspace_name;
 describe tables;
 ```
 
+### Show schema
+```shell
+describe schema;
+```
+
 ### Basic SELECT statement
 ```shell
 select * from table_name;
