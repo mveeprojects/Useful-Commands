@@ -64,3 +64,13 @@ kubectl -n <namespace> describe cm <configmap-name> -o yaml
 ```shell
 kubectl -n <namespace> edit configmap <configmap-name>
 ```
+
+### List all secrets
+```shell
+kubectl -n <namespace> get secrets
+```
+
+### View a secret
+```shell
+kubectl -n <namespace> get secret <secret_name> -o yaml
+```
