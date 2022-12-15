@@ -77,5 +77,5 @@ kubectl -n <namespace> get secret <secret_name> -o yaml
 
 ### Copy secret from one context to another
 ```shell
-kubectl -n <namespace> get secret <secret_name> --namespace partner-accounts-int-nft --context <context> -o yaml | kubectl apply -n <namespace> --context <context>  -f -
+kubectl get secret <secret_name> -n <namespace> --context <context> -o yaml | kubectl apply -n <namespace> --context <context>  -f -
 ```
