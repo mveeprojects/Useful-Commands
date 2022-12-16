@@ -28,22 +28,10 @@ docker run --rm --network=my-network edenhill/kcat:1.7.1 -b kafka-container-name
 
 ### kcat publish to topic (interactive, ctrl-D to exit) from confluent docs [here](https://docs.confluent.io/platform/current/app-development/kafkacat-usage.html#producer-mode)
 ```shell
-docker run -it --rm --network=my-network edenhill/kcat:1.7.1 -b kafka-container-name:9092 -t test-topic -P
+docker run -it --rm --network=my-network edenhill/kcat:1.7.1 -b kafka-container-name:9092 -t <topicname> -P
 ```
 
-# Kafkacat
-
-#### Get all topics
+### Consume messages from topic 
 ```shell
-docker exec -it <confluentinc/cp-kafkacatcontainerid> kafkacat -L -b kafka:29092
-```
-
-#### Produce a message to a topic 
-```shell
-docker exec -it <confluentinc/cp-kafkacatcontainerid> kafkacat -P -b kafka:29092 -t <topicname>
-```
-
-#### Consume messages from topic 
-```shell
-docker exec -it <confluentinc/cp-kafkacatcontainerid> kafkacat -C -b kafka:29092 -t <topicname> -o beginning
+docker run -it --rm --network=my-network edenhill/kcat:1.7.1 -C -b kafka-container-name:29092 -t <topicname> -o beginning
 ```
