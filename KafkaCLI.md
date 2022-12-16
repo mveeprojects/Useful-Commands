@@ -30,3 +30,20 @@ docker run --rm --network=my-network edenhill/kcat:1.7.1 -b kafka-container-name
 ```shell
 docker run -it --rm --network=my-network edenhill/kcat:1.7.1 -b kafka-container-name:9092 -t test-topic -P
 ```
+
+# Kafkacat
+
+#### Get all topics
+```shell
+docker exec -it <confluentinc/cp-kafkacatcontainerid> kafkacat -L -b kafka:29092
+```
+
+#### Produce a message to a topic 
+```shell
+docker exec -it <confluentinc/cp-kafkacatcontainerid> kafkacat -P -b kafka:29092 -t <topicname>
+```
+
+#### Consume messages from topic 
+```shell
+docker exec -it <confluentinc/cp-kafkacatcontainerid> kafkacat -C -b kafka:29092 -t <topicname> -o beginning
+```
