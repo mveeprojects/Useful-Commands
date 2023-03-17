@@ -85,14 +85,41 @@ db.collection.find({"lastname" : {"$exists" : true, "$ne" : ""}})
 db.collection.find().limit(N).sort({$natural:-1}).pretty()
 ```
 
-### Find oldest record
+### Find oldest/newest record
 ```shell
-db.collection.find().sort({ "date_time" : 1 }).limit(1)
-```
+db.people.insert({name: "Bob", age: 42, dateAdded: new Date()})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("64147bdf169b4546e6db2970") }
+}
 
-### Find newest record
-```shell
-db.collection.find().sort({ "date_time" : -1 }).limit(1)
+db.people.insert({name: "Sally", age: 58, dateAdded: new Date()})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("64147be5169b4546e6db2971") }
+}
+
+// find oldest record by date field
+db.people.find().sort({dateAdded: 1}).limit(1)
+[
+  {
+    _id: ObjectId("64147bdf169b4546e6db2970"),
+    name: 'Bob',
+    age: 42,
+    dateAdded: ISODate("2023-03-17T14:40:31.415Z")
+  }
+]
+
+// find newest record by date field
+db.people.find().sort({dateAdded: -1}).limit(1)
+[
+  {
+    _id: ObjectId("64147be5169b4546e6db2971"),
+    name: 'Sally',
+    age: 58,
+    dateAdded: ISODate("2023-03-17T14:40:37.035Z")
+  }
+]
 ```
 
 ### Export collection to csv
