@@ -88,16 +88,7 @@ db.collection.find().limit(N).sort({$natural:-1}).pretty()
 ### Find oldest/newest record
 ```shell
 db.people.insert({name: "Bob", age: 42, dateAdded: new Date()})
-{
-  acknowledged: true,
-  insertedIds: { '0': ObjectId("64147bdf169b4546e6db2970") }
-}
-
 db.people.insert({name: "Sally", age: 58, dateAdded: new Date()})
-{
-  acknowledged: true,
-  insertedIds: { '0': ObjectId("64147be5169b4546e6db2971") }
-}
 
 // find oldest record by date field
 db.people.find().sort({dateAdded: 1}).limit(1)
