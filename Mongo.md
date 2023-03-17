@@ -85,6 +85,16 @@ db.collection.find({"lastname" : {"$exists" : true, "$ne" : ""}})
 db.collection.find().limit(N).sort({$natural:-1}).pretty()
 ```
 
+### Find oldest record
+```shell
+db.collection.find().sort({ "date_time" : 1 }).limit(1)
+```
+
+### Find newest record
+```shell
+db.collection.find().sort({ "date_time" : -1 }).limit(1)
+```
+
 ### Export collection to csv
 ```shell
 docker exec -i 418f46e5595d  mongoexport --db saveInfo --collection infoobjects --type=csv --fields _id,postLink,postTitle,contactPhone --out ./info.csv
