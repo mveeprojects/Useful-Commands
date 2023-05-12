@@ -44,3 +44,24 @@ select * from table_name where non_pk_field_name='field_value' allow filtering;
 ```shell
 EXPAND ON;
 ```
+
+### Query with "OR" alternative (in)
+```shell
+SELECT * from keyspace.table_name WHERE field_name in ('something','something_else');
+```
+
+### Batch insert
+```shell
+BEGIN BATCH
+INSERT INTO keyspace.table_name (fieldA, fieldB) VALUES ('hello', 'world');
+INSERT INTO keyspace.table_name (fieldA, fieldB) VALUES ('foo', 'bar');
+APPLY BATCH;
+```
+
+### Batch update
+```shell
+BEGIN BATCH
+UPDATE keyspace.table_name SET fieldA='SKY', fieldB='SKY' WHERE fieldC='blah' AND fieldD='something';
+UPDATE keyspace.table_name SET fieldA='SKY', fieldB='SKY' WHERE fieldC='halb' AND fieldD='something_else';
+APPLY BATCH;
+```
