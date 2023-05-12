@@ -42,7 +42,7 @@ select * from table_name where non_pk_field_name='field_value' allow filtering;
 
 ### SELECT with "OR" alternative (in)
 ```shell
-SELECT * from keyspace.table_name WHERE field_name in ('something','something_else');
+select * from keyspace.table_name WHERE field_name in ('something','something_else');
 ```
 
 ### Batch insert
