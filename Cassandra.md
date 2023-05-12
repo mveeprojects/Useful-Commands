@@ -61,7 +61,7 @@ APPLY BATCH;
 ### Batch update
 ```shell
 BEGIN BATCH
-UPDATE keyspace.table_name SET fieldA='SKY', fieldB='SKY' WHERE fieldC='blah' AND fieldD='something';
-UPDATE keyspace.table_name SET fieldA='SKY', fieldB='SKY' WHERE fieldC='halb' AND fieldD='something_else';
+UPDATE keyspace.table_name SET fieldA='bonjour', fieldB='earth' WHERE fieldC='blah' AND fieldD='something';
+UPDATE keyspace.table_name SET fieldA='ola', fieldB='world' WHERE fieldC='halb' AND fieldD='something_else';
 APPLY BATCH;
 ```
