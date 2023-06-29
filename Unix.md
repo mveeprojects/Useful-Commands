@@ -266,3 +266,15 @@ pbpaste | base64
 ```shell
 pbpaste | base64 -d
 ```
+
+### netcat (nc) check port on host
+```shell
+# -z (scan for port, without sending any data)
+# -v (verbose)
+nc -zv google.com 80
+```
+
+### telnet check port on host
+```shell
+telnet google.com 80
+```
