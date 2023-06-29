@@ -45,6 +45,11 @@ select * from table_name where non_pk_field_name='field_value' allow filtering;
 select * from keyspace.table_name WHERE field_name in ('something','something_else');
 ```
 
+### COUNT rows
+```shell
+SELECT COUNT(*) FROM keyspace.table_name;
+```
+
 ### Batch insert
 ```shell
 BEGIN BATCH
