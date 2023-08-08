@@ -10,6 +10,11 @@ sbt sbtVersion
 sbt about
 ```
 
+### Run an sbt command in a particular module/project
+```shell
+sbt "project myExampleProjectName" run
+```
+
 ### Run tests in a specific module/sub-project
 ```shell
 sbt sbt_project_name/test
