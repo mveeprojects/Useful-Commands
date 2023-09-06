@@ -40,6 +40,11 @@ Right click on your project, click Add Framework support and choose Scala framew
 VM Options -> -javaagent:<javaagentpathfromrootofproject>
 ```
 
+### Toggle between uppercase and lowercase
+```
+Cmnd + shift + U
+```
+
 ### Fold elements
 ```
 cmd + alt + -
