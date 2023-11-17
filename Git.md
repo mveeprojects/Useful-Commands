@@ -87,12 +87,12 @@ git reset --hard HEAD
 git tag
 ```
 
-### Create new tag
+### Add new tag (git tag new old)
 ```shell
-git tag <new_tag> <old_tag>
+git tag myapp-1.0.1 myapp-1.0.0
 ```
 
 ### Push new tag
 ```shell
-git push origin <new_tag>
+git push origin myapp-1.0.1
 ```
