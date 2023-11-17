@@ -81,3 +81,18 @@ git stash --all
 ```shell
 git reset --hard HEAD
 ```
+
+### View all tags
+```shell
+git tag
+```
+
+### Create new tag
+```shell
+git tag <new_tag> <old_tag>
+```
+
+### Push new tag
+```shell
+git push origin <new_tag>
+```
