@@ -23,6 +23,8 @@ sbt sbt_project_name/test
 ### Run a single test class
 ```shell
 sbt "testOnly MyTestClassNameSpec"
+or
+sbt ";clean ;compile ;sbt_project_name/testOnly *MyTestClassNameSpec"
 ```
 
 ### Run all test classes based on a matcher (wildcard)
