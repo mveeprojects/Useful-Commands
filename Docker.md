@@ -10,6 +10,16 @@ docker ps
 docker ps -a
 ```
 
+### Show all active and non-active containers (Container ID, Names and Status columns only)
+```shell
+docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
+```
+
+### Watch active and non-active containers (refresh every second)
+```shell
+watch -n1 'docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"'
+```
+
 ### Show all images available locally
 ```shell
 docker images
