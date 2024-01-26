@@ -108,6 +108,17 @@ zip -r my.zip .
 zip -e myzipperoo.zip temp/*
 ```
 
+### Unpacking tar.gz (2 step)
+```shell
+gzip -d filename.tar.gz
+tar -xvf filename.tar
+```
+
+### Unpacking tar.gz (1 step)
+```shell
+tar -xzf filename.tar.gz
+```
+
 ### Install ifconfig if missing
 ```shell
 sudo [yum|apt-get] install -y net-tools
@@ -157,17 +168,6 @@ tail -n 1000 <filename>
 ### Get tar.gz of Java8_171 from command line (wget)
 ```shell
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjdk8-downloads-2133151.html; oraclelicense=accept-securebackup-cookie;" "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz"
-```
-
-### Unpacking tar.gz (2 step)
-```shell
-gzip -d filename.tar.gz
-tar -xvf filename.tar
-```
-
-### Unpacking tar.gz (1 step)
-```shell
-tar -xzf filename.tar.gz
 ```
 
 ### Revert to default shell
