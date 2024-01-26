@@ -103,6 +103,11 @@ find . -type f -empty -delete -print
 zip -r my.zip .
 ```
 
+### Zip a directory with password (-e => prompted after running command to add password)
+```shell
+zip -e myzipperoo.zip temp/*
+```
+
 ### Install ifconfig if missing
 ```shell
 sudo [yum|apt-get] install -y net-tools
