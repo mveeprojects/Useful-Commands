@@ -67,11 +67,6 @@ cd old-repository.git
 git push --mirror https://github.com/exampleuser/new-repository.git
 ```
 
-### Squash and merge branch in current branch
-```shell
-git merge --squash <branch-to-squash-and-merge>
-```
-
 ### Stash all including untracked
 ```shell
 git stash --all
@@ -97,7 +92,11 @@ git tag myapp-1.0.1 myapp-1.0.0
 git push origin myapp-1.0.1
 ```
 
-### Squash commits together (interactive rebase)
+## Squsshing commits
+
+https://www.git-tower.com/learn/git/faq/git-squash
+
+### Interactive Rebase
 ```shell
 git log (figure out how many of the most recent commmits you want to squash together)
 git rebase -i HEAD~<number of commits to squash together>
@@ -108,4 +107,9 @@ change all others from pick xyz to squash xyz.
 [another vi terminal opens, i to edit]
 Amend the commit message as you need.
 [close and save with esc then :wq]
+```
+
+### Merge
+```shell
+git merge --squash <branch_name>
 ```
