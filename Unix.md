@@ -283,3 +283,11 @@ nc -zv google.com 80
 ```shell
 telnet google.com 80
 ```
+
+### Save output of command to a file
+```shell
+# Set the command to an environemnt variable (this helps preserve whitespaces and newlines etc.)
+TEMP=`kubectl -n my_namespace get events --sort-by=.metadata.creationTimestamp | grep fail`
+# Now echo this env var to a file making sure to wrap it in double quotes
+echo "$TEMP" >> output.txt
+```
