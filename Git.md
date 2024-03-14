@@ -113,3 +113,9 @@ Amend the commit message as you need.
 ```shell
 git merge --squash <branch_name>
 ```
+
+### Amend most recent commit
+```shell
+# Adds all unstaged files and then amends latest commit with them.
+git commit -a --amend
+```
