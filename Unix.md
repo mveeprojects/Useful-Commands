@@ -295,4 +295,6 @@ echo "$TEMP" >> output.txt
 ### Show all installed versions of Java (Mac)
 ```shell
 /usr/libexec/java_home -V
+or
+mdfind -name 'java' | grep '/bin/java$'
 ```
