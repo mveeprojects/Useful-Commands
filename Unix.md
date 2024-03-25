@@ -291,3 +291,8 @@ TEMP=`kubectl -n my_namespace get events --sort-by=.metadata.creationTimestamp |
 # Now echo this env var to a file making sure to wrap it in double quotes
 echo "$TEMP" >> output.txt
 ```
+
+### Show all installed versions of Java (Mac)
+```shell
+/usr/libexec/java_home -V
+```
