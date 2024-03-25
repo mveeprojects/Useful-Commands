@@ -13,6 +13,8 @@ docker ps -a
 ### Show all active and non-active containers (Container ID, Names and Status columns only)
 ```shell
 docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
+or "watch" with ports shown:
+watch -n1 'docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"'
 ```
 
 ### Watch active and non-active containers (refresh every second)
