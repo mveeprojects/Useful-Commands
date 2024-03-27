@@ -1,7 +1,7 @@
 # ElasticSearch
 
 ### Search by wildcard ("field contains x string")
-[Wildcard documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-wildcard-query.html)
+[Wildcard documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-wildcard-query.html).
 ```json
 {
   "query": {
