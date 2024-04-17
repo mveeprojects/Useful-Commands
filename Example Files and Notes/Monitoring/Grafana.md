@@ -12,3 +12,11 @@ https://stackoverflow.com/a/74235396/3059314
 > - Add Extract fields transform to split Field into separate fields.
 > - If you want to do anything with the ordering this is the place to add a Sort by transform.
 > - Add Grouping to matrix transform to create new columns from the new code field. Use code as Column, instance as Row and Max as Cell Value.
+
+
+### Filter a Grafana variable using a prometheus datasource
+
+Add the below to the regex section to filter the possible values only if they include `substring` or `another_substring`.
+```
+ (.*substring.*|.*another_substring.*)
+```
