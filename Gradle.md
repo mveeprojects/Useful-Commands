@@ -10,7 +10,12 @@ brew install gradle@6|7|8
 gradle wrapper
 ```
 
-### Run task against a particular [sub]project
+### Run a task (build) against a particular [sub]project
 ```shell
 gradle :projectname:build
+```
+
+### Clean then run a task (build) against a project
+```shell
+gradle clean :projectname:build
 ```
