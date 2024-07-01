@@ -47,3 +47,8 @@ for i in "${my_array[*]}"; do echo "$i"; done # gather all elements into a singl
 for i in "${my_array}"; do echo "$i"; done # only use first element
 # foo
 ```
+
+### Exit bash script on error
+```shell
+set -e
+```
