@@ -119,3 +119,8 @@ git merge --squash <branch_name>
 # Adds all unstaged files and then amends latest commit with them.
 git commit -a --amend
 ```
+
+### View repo metadata (public repos only)
+```shell
+curl https://api.github.com/repos/mveeprojects/Useful-Commands
+```
