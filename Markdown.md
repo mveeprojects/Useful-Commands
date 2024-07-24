@@ -8,8 +8,8 @@
 
 ```json
 {
-  name: "mark",
-  food: "cheese"
+  "name": "mark",
+  "food": "cheese"
 }
 ```
 </details>
