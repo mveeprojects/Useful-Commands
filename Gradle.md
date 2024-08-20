@@ -19,3 +19,9 @@ gradle :projectname:build
 ```shell
 gradle clean :projectname:build
 ```
+
+### Copy dependency tree to file
+```shell
+./gradlew dependencies > deps.txt
+./gradlew project_name:dependencies > deps.txt
+```
