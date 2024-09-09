@@ -60,6 +60,11 @@ select * from keyspace.table_name WHERE field_name in ('something','something_el
 SELECT COUNT(*) FROM keyspace.table_name;
 ```
 
+### Return distinct partition keys
+```cql
+SELECT DISTINCT partition_key FROM keyspace.table_name;
+```
+
 ### Batch insert
 ```cql
 BEGIN BATCH
