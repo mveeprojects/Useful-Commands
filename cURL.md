@@ -30,3 +30,8 @@ curl www.google.com -s -o /dev/null
 * `--output /dev/null` hides successful output
 * `--show-error` shows errors, even when silent mode is enabled
 * `--fail` will raise an error if HTTP response is an error code (404, 500 etc.) instead of merely DNS/TCP errors.
+
+### Pretty print JSON response of curl with json_pp
+```shell
+curl ... | json_pp
+```
