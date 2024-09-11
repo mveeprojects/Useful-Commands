@@ -124,3 +124,19 @@ git commit -a --amend
 ```shell
 curl https://api.github.com/repos/mveeprojects/Useful-Commands
 ```
+
+### Script to modify the origin of all repos in current and sub-directories
+```shell
+#/bin/bash
+SEARCH_ROOT=./
+PATTERN=com:someorgname
+REPLACEMENT=com:someotherorgname
+find "$SEARCH_ROOT" -type d -name "\.git"  -print | while read -r REPO;
+do
+  pushd "$REPO/../" > /dev/null || continue
+  NEWURL=$(git remote get-url origin | grep "$PATTERN" | sed "s/$PATTERN/$REPLACEMENT/g")
+  echo $NEWURL
+  [ -z "$NEWURL" ] || git remote set-url origin "$NEWURL"
+  popd > /dev/null || exit 1
+done
+```
