@@ -298,3 +298,8 @@ echo "$TEMP" >> output.txt
 or
 mdfind -name 'java' | grep '/bin/java$'
 ```
+
+### Find a given string in sh files
+```shell
+find . -name '*.sh' -exec grep "some string you want to find" {} \;
+```
