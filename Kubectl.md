@@ -50,6 +50,18 @@ kubectl config use-context <context-name>
 kubectl cp pod_name:/path/filename /path/filename
 ```
 
+### Copy file with retries (useful for very large files)
+```
+If you are copying a large file and see this (incomplete download):
+
+Dropping out copy after 0 retries
+error: unexpected EOFDropping out copy after 0 retries
+error: unexpected EOF
+
+Add --retries 10 to circumvent
+kubectl cp pod_name:/path/filename /path/filename --retries 10
+```
+
 ### View all events in order
 ```shell
 kubectl -n <namespace> get events --sort-by=.metadata.creationTimestamp
