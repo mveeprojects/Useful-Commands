@@ -87,6 +87,11 @@ kubectl -n <namespace> get secrets
 kubectl -n <namespace> get secret <secret_name> -o yaml
 ```
 
+### Create a secret in one-line
+```shell
+kubectl -n <namespace> create secret generic <secret_name> --from-literal=password="password123"
+```
+
 ### Copy a secret from one context to another
 ```shell
 kubectl -n <namespace> --context <context> get secret <secret_name> -o yaml | kubectl -n <namespace> --context <context> apply  -f -
