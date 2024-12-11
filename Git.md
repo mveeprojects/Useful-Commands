@@ -3,6 +3,9 @@
 ### GitHub link to particular lines of file
 https://github.com/mveeprojects/Useful-Commands/blob/master/Git.md#L1-L2
 
+### GitHub comparison view
+https://github.com/mveeprojects/Useful-Commands/compare
+
 ### Commit changes locally
 ```shell
 git commit -a -m "Commit message goes here"
