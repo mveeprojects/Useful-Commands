@@ -55,12 +55,12 @@ scp username@192.168.1.111:/path/to/myfile.txt /Users/Jamie/local/path/to/myfile
 
 ### Find file/dir in root dir
 ```shell
+# simple
 find / -name somefilename
-```
-
-### Find directory in root dir
-```shell
+# directories only
 find / -type d -name 'some_filename'
+# prevent printing errors
+find / type d -name 'some_filename' 2> /dev/null
 ```
 
 ### Find files containing a given string
