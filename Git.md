@@ -96,8 +96,12 @@ git push origin myapp-1.0.1
 ```
 
 ## Squsshing commits
-
 https://www.git-tower.com/learn/git/faq/git-squash
+```shell
+git rebase -i HEAD~x (x is the number of commits you want to squash together, including the most recent commit).
+Change all but the top commit on the interactive window from pick to squash (then exit interative window; esc, :wq)
+Alter commit message as you like (then exit interative window).
+```
 
 ### Interactive Rebase
 ```shell
