@@ -169,7 +169,7 @@ docker inspect --format='{{json .State.Health}}' <container>
 curl -v -X GET https://registry_name/v2/_catalog
 ```
 
-### List all tags for a given repository/image
+### List all tags/versions for a given repository/image
 ```shell
 curl -v -X GET https://registry_name/v2/some/path/here/to/image_name/tags/list
 ```
