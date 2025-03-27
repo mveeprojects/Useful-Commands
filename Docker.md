@@ -173,3 +173,9 @@ curl -v -X GET https://registry_name/v2/_catalog
 ```shell
 curl -v -X GET https://registry_name/v2/some/path/here/to/image_name/tags/list
 ```
+
+### Add this entrypoint to a Dockerfile to keep image up and running as long as you need
+##### Useful when you just want to spin up an image with curl or something quickly to test bits and pieces
+```shell
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+```
