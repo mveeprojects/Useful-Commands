@@ -10,6 +10,12 @@ docker ps
 docker ps -a
 ```
 
+### Enter into a container with exec
+```shell
+docker exec -it container_name [sh|bash|etc]
+```
+
+
 ### Show all active and non-active containers (Container ID, Names and Status columns only)
 ```shell
 docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
