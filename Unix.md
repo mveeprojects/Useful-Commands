@@ -299,6 +299,14 @@ or
 mdfind -name 'java' | grep '/bin/java$'
 ```
 
+### Date 30 days ago
+```shell
+# As epoch string
+date -j -v-30d '+%s'
+# As dd-mm-yyyy
+date -j -v-30d '+%d-%m-20%y'
+```
+
 ### Find a given string in sh files
 ```shell
 find . -name '*.sh' -exec grep "some string you want to find" {} \;
