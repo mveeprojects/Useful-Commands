@@ -147,3 +147,8 @@ do
   popd > /dev/null || exit 1
 done
 ```
+
+### Copy current branch name to clipboard
+```shell
+git rev-parse --abbrev-ref HEAD | pbcopy
+```
