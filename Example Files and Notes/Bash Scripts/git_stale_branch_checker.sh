@@ -1,5 +1,5 @@
 #!/bin/bash
-# modified version of https://www.geeksforgeeks.org/how-to-clean-old-remote-git-branches/#approach-2-automated-scripts
+# Modified version of https://www.geeksforgeeks.org/how-to-clean-old-remote-git-branches/#approach-2-automated-scripts
 
 # Add this file to the repo you want to check and set it as executable if not already done (chmod +x git_stale_branch_checker.sh)
 # Run using ./git_stale_branch_checker.sh
