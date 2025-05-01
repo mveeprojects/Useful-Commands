@@ -1,0 +1,28 @@
+#!/bin/bash
+# modified version of https://www.geeksforgeeks.org/how-to-clean-old-remote-git-branches/#approach-2-automated-scripts
+
+# Add this file to the repo you want to check and set it as executable if not already done (chmod +x git_stale_branch_checker.sh)
+# Run using ./git_stale_branch_checker.sh
+
+# Example output:
+# Threshold date: Tue 1 Apr 2025 15:14:57 BST
+# Branch datastax_only is stale, the most recent commit was made on Mon 12 Jun 2023 18:54:01 BST
+# Branch master is stale, the most recent commit was made on Mon 28 Feb 2022 14:45:48 GMT
+
+git fetch --prune
+
+# Get the current date minus 30 days
+THRESHOLD_DATE=$(date -j -v-30d +%s)
+
+echo Threshold date: $(date -r $THRESHOLD_DATE)
+
+# Loop through remote branches
+for branch in $(git branch -r | grep -v '\->'); do
+    # Get the last commit date of the branch
+    LAST_COMMIT_DATE=$(git log -1 --format=%ct "${branch#origin/}")
+
+    # Check if the branch is older than the threshold
+    if [[ $LAST_COMMIT_DATE -lt $THRESHOLD_DATE ]]; then
+             echo "Branch ${branch#origin/} is stale, the most recent commit was made on $(date -r $LAST_COMMIT_DATE)"
+  fi
+done
