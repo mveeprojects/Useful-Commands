@@ -18,13 +18,17 @@ THRESHOLD_DATE=$(date -j -v-30d +%s)
 
 echo "Threshold date: $(date -r $THRESHOLD_DATE)"
 
-# Loop through remote branches
+arr=()
+
 for branch in $(git branch -r | grep -v '\->'); do
     LAST_COMMIT_DATE=$(git log -1 --format=%ct "${branch#origin/}")
     LAST_COMMIT_AUTHOR=$(git log -1 --pretty=format:%an "${branch#origin/}")
 
-    # Check if the branch is older than the threshold
     if [[ $LAST_COMMIT_DATE -lt $THRESHOLD_DATE ]]; then
-             echo "Branch ${branch#origin/} is stale, the most recent commit was made by ${LAST_COMMIT_AUTHOR} on $(date -r $LAST_COMMIT_DATE)"
+             arr+=("$LAST_COMMIT_AUTHOR last committed a change to $branch on $(date -r $LAST_COMMIT_DATE)")
   fi
 done
+
+for message in "${arr[@]}"; do
+    echo "$message"
+done | sort
