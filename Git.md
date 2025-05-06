@@ -95,7 +95,7 @@ git tag myapp-1.0.1 myapp-1.0.0
 git push origin myapp-1.0.1
 ```
 
-## Squsshing commits
+## Squashing commits
 https://www.git-tower.com/learn/git/faq/git-squash
 ```shell
 git rebase -i HEAD~x (x is the number of commits you want to squash together, including the most recent commit).
