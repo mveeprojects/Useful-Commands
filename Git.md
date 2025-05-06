@@ -103,6 +103,25 @@ Change all but the top commit on the interactive window from pick to squash (the
 Alter commit message as you like (then exit interative window).
 ```
 
+## Simple example of squashing commits
+```
+Squash the two most recent commits together into one commit
+
+git rebase -i HEAD~2
+
+pick a2c5421866 ...
+pick ec942c8fb7 ...
+
+[edit this with `i` to match the below]
+
+pick a2c5421866 ...
+squash ec942c8fb8 ...
+
+esc :wq
+
+[edit commit message in next window, then esc :wq again]
+```
+
 ### Interactive Rebase
 ```shell
 git log (figure out how many of the most recent commmits you want to squash together)
