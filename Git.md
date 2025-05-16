@@ -167,6 +167,11 @@ do
 done
 ```
 
+### Checkout a specific directory from another branch into current (can also append specifc files on the end (e.g. /file_name) if only certain files are needed)
+```shell
+git checkout branch_name_with_useful_dir_changes -- dir_with_useful_changes
+```
+
 ### Copy current branch name to clipboard
 ```shell
 git rev-parse --abbrev-ref HEAD | pbcopy
