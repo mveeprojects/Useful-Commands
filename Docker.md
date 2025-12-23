@@ -31,7 +31,12 @@ watch -n1 'docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"'
 ### Show all images available locally
 ```shell
 docker images
-````
+```
+
+### Show all images available locally with human readable date & time of creation
+```shell
+docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.CreatedAt}}\t{{.Size}}"
+```
 
 ### Run a docker container with a given name
 ```shell
